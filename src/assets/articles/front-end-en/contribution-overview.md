@@ -1,8 +1,8 @@
 ## Why Contribute
 
-As Taipei City Dashboard transitions from an internal tool to a public platform, we hope that it can better fit the needs of all stakeholders of Taipei City.
+As the City Dashboard transitions from an internal tool to a public platform, we hope that it can better meet the needs of citizens and policy makers in both Taipei and New Taipei City. This is also why we decided to release it while the project is still under development.
 
-By contributing to this project, you’ll have a say in how Taipei City Dashboard 2.0 looks and functions. This is also a great opportunity to directly interact with Taipei City Government and TUIC. Your contributions will also be attributed to all relevant components for everyone to see.
+By contributing to this project, you’ll have a say in how City Dashboard 3.0 looks and functions. This is also a great opportunity to directly interact with Taipei City Government and TUIC. Your contributions will also be attributed to all relevant components for everyone to see.
 
 ## Become a Contributor
 

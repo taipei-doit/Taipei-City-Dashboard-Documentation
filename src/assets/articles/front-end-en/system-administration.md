@@ -16,7 +16,7 @@ Public dashboards are listed and managed in the `/admin/dashboard` page. Unlike 
 
 [`GET` `/api/v1/dashboard/check-index/:index-to-check`](/back-end/dashboard-apis) checks if an index is available.
 
-[`POST` `/api/v1/dashboard/public`](/back-end/dashboard-apis) creates a public dashboard.
+[`POST` `/api/v1/dashboard/public/:city`](/back-end/dashboard-apis) creates a public dashboard.
 
 [`PATCH` `/api/v1/dashboard/:index`](/back-end/dashboard-apis) modifies a public dashboard.
 
@@ -28,11 +28,11 @@ Components are listed and managed in the `/admin/component` page. Currently, cre
 
 [`GET` `/api/v1/component`](/back-end/component-config-apis) returns all components.
 
-[`PATCH` `/api/v1/component/:id`](/back-end/component-config-apis) modifies a component.
+[`PATCH` `/api/v1/component/:id?city=`](/back-end/component-config-apis) modifies a component.
 
-[`PATCH` `/api/v1/component/:id/chart`](/back-end/component-config-apis) modifies a component's chart config.
+[`PATCH` `/api/v1/component/:id?city=/chart`](/back-end/component-config-apis) modifies a component's chart config.
 
-[`PATCH` `/api/v1/component/:id/map`](/back-end/component-config-apis) modifies a component's map config.
+[`PATCH` `/api/v1/component/:id?city=/map`](/back-end/component-config-apis) modifies a component's map config.
 
 ## Issue Management
 

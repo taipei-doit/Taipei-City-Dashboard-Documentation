@@ -36,9 +36,5 @@ Mapbox 是基於 OpenStreetMap 架構的地圖渲染工具。Mapbox 的文件可
 
 Axios 用於進行 HTTP 請求。Axios 的文件可以在[這裡](https://axios-http.com/docs/intro)找到。
 
-### City Dashboard Component
-
-儀表板中組件都是使用這個套件渲染。其文件可以在[這裡](https://www.npmjs.com/package/city-dashboard-component)找到。
-
 > **t01**
 > 如果您是前端開發的新手，我們建議您在學習像 Vue 的前端框架之前，先熟悉 HTML、CSS 和 JavaScript 的基礎知識。[Scrimba](https://scrimba.com/allcourses)、[Codecademy](https://www.codecademy.com/)、[W3Schools](https://www.w3schools.com/) 和 [FreeCodeCamp](https://www.freecodecamp.org/) 都是學習網頁開發的好資源。

@@ -17,7 +17,7 @@ In the database, chart configs are stored separately in the `component_charts` t
 
 ## Chart Types
 
-The Vue components for each chart could be found in the folder `/src/components/charts`. For Apexcharts-based charts, their respective Vue components all contain a `chartOptions` object where various [Apexcharts parameters](https://apexcharts.com/docs/options/annotations/) could be passed in. Some chart Vue components also include parsing functions to clean chart data. This is to increase the interoperability between charts, allowing the same dataset to render multiple different chart types.
+The Vue components for each chart could be found in the folder `/src/dashboardComponents/components`. For Apexcharts-based charts, their respective Vue components all contain a `chartOptions` object where various [Apexcharts parameters](https://apexcharts.com/docs/options/annotations/) could be passed in. Some chart Vue components also include parsing functions to clean chart data. This is to increase the interoperability between charts, allowing the same dataset to render multiple different chart types.
 
 Below is a reference of English and Mandarin names for all chart types.
 
@@ -39,7 +39,8 @@ Below is a reference of English and Mandarin names for all chart types.
 	ColumnLineChart: "長條折線圖",
 	BarChartWithGoal: "長條圖(目標)",
 	IconPercentChart: "圖示比例圖",
-	IndicatorChart: "指標圖"
+	IndicatorChart: "指標圖",
+     TextUnitChart: "文字單位圖"
 };
 ```
 
@@ -56,9 +57,9 @@ Bar charts are usually utilized when there is a long list of data that needs to 
 
 Bar percent charts are used to visualize percentage values in a more concise and tight format compared to gauge charts.
 
-### Column Chart
+### Column Chart ***new***
 
-Column charts are used to display lists that contain 12 items or less.
+Column charts are used to display item lists and are best suited for presenting fewer than 12 data items. When the number of data items exceeds 12, the chart automatically provides a scrolling function to view more data, and a toolbar appears at the top, allowing users to zoom in and out of items.
 
 ### Donut Chart
 
@@ -122,9 +123,9 @@ Metro charts display the density of metro train carriages on a given metro line.
 }
 ```
 
-### District Chart
+### District Chart ***new***
 
-District charts are used to display lists where the keys are Taipei City districts. By default, larger values are rendered with higher opacity.
+District charts are used to display lists where the keys are Taipei and New Taipei City districts. By default, larger values are rendered with higher opacity.
 
 ### Heatmap Chart
 
@@ -146,7 +147,7 @@ Bar chart with goal adds an additional dimension to ordinary bar charts, showing
 
 Icon percent charts displays percentage data via a grid of two separate icons.
 
-### Indicator Chart **_new_**
+### Indicator Chart
 
 Indicator charts are used to display whether a value is within a certain range. The chart displays a colored indicator based on the value. Indicator charts are rendered via 3D data but require the keys, subcategories, and values to be in a special format as displayed below.
 
@@ -164,6 +165,29 @@ Indicator charts are used to display whether a value is within a certain range. 
 		{
 			"name": "II",
 			"data": [0, 15, 0],
+		}
+	]
+}
+```
+
+### Text Unit Chart ***new***
+
+The text unit chart is used to clearly display values and their corresponding text descriptions and units. This chart applies three colors set in chart_config sequentially to the display of text descriptions, values, and units. Although the text unit chart uses a 3D data structure, it specifically utilizes the icon field to present unit symbols or other supplementary information, providing more complete context for the data. Usage example as follows:
+
+```json
+{
+    // categories field is not needed in this chart type
+	"categories": [""],
+	"data": [
+		{
+			"name": "Dependency Ratio", // Text description part
+			"data": [49], // Value part
+            "icon": "%" // Unit or supplementary information part
+		},
+		{
+			"name": "Aging Index",
+			"data": [219],
+            "icon": "%"
 		}
 	]
 }

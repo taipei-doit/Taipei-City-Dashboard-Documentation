@@ -25,7 +25,8 @@
         "type": "fill", // String; 輸入 8 種任一種可用的地圖類型
         "size": null, // String || null; 額外預設樣式設定，參見下一節
         "icon": null, // String || null; 額外預設樣式設定，參見下一節
-		"source": "raster" // "raster" || "geojson"
+		"source": "raster", // "raster" || "geojson"
+        "city": // taipei || metrotaipei; 資料所屬城市
     },
     …
 ],

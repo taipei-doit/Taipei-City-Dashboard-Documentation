@@ -14,6 +14,7 @@
 ...
 VITE_MAPBOXTOKEN= # See Info 1
 VITE_MAPBOXTILE=mapbox:// # See Info 2
+VITE_PERSONAL_BOARD_UPDATE= #  See Info 3. This variable can be configured according to your needs
 ...
 
 ## Server ENV Configs
@@ -52,6 +53,16 @@ PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
 >
 > Navigate back to the tileset on MapBox. On the left of the screen, you will see a sidebar titled "Vector Layers". Copy the name of the polygon layer (it should start with "tp_building_height") below the title. Then, return to project repository and navigate to `/src/assets/configs/mapbox/mapConfig.js`. Find a object called "TaipeiBuilding" and replace the parameter "source-layer" with the polygon layer name you copied.
 
+> **i03**
+> This variable is newly added in version 3.0, used to control the automatic update frequency of personal dashboards. You can leave this variable empty and configure your personal dashboard update frequency later as needed.
+>
+> Parameter format definition: personal dashboard index:update frequency(seconds),personal dashboard index:update frequency(seconds), using commas to separate multiple dashboard settings.
+> 
+> Configuration example: `VITE_MAPBOXTOKEN`=71528009ae4b:600,415dc056e6df:600,278b42f7d039:600,f7a3542955f1:600
+>
+> The above example shows four different dashboards (identified by index), each set to automatically refresh once every 600 seconds (10 minutes).
+> 
+
 **_looks_4_** In the terminal, execute the following commands one by one to create a docker network and start the containers.
 
 > **t01**
@@ -75,7 +86,7 @@ Initialize the frontend and backend environments. The containers created via thi
 docker-compose -f docker-compose-init.yaml up -d
 ```
 
-> **i03**
+> **i04**
 > Within the docker-compose-init.yaml file, three containers are tasked with the following responsibilities:
 >
 > `dashboard-fe-init`: Execute npm install; `dashboard-be-init-manager`: Initialize the manager DB; `dashboard-be-init-dashboard`: Initialize the dashboard DB.
@@ -94,7 +105,7 @@ docker-compose up -d
 >
 > The backend does not support hot-reloading. If you make changes to the backend code, you will need to restart the `dashboard-be` container.
 
-> **i04**
+> **i05**
 > From now on, if you would like to reinitiate the databases, please follow the steps below:
 >
 > Firstly, ensure that all relevant containers are closed or deleted. Next, delete the `/docker/db-data` directory. Finally, execute the above three `docker-compose` commands.

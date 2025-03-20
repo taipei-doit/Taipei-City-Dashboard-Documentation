@@ -23,7 +23,7 @@
 	--color-normal-text: white;
 	--color-complement-text: #888787; /* 不太重要文字的顏色 */
 	--color-component-background: #282a2c; /* 大多數UI元素的背景顏色 */
-	--color-overlay: rgba(0, 0, 0, 0.65); /* 對話框的遮罩 */
+	--color-overlay: rgba(0, 0, 0, 0.66); /* 對話框的遮罩 */
 	--font-to-icon: 1.2;
 	--font-xl: 1.5rem;
 	--font-l: 1.25rem;
@@ -31,6 +31,7 @@
 	--font-ms: 1rem;
 	--font-s: 0.75rem;
 	--font-icon: "Material Icons Round";
+    --vh: 1vh;
 }
 ```
 
