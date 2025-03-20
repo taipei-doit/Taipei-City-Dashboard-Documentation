@@ -14,6 +14,7 @@
 ...
 VITE_MAPBOXTOKEN= # 參見資訊 1
 VITE_MAPBOXTILE=mapbox:// # 參見資訊 2
+VITE_PERSONAL_BOARD_UPDATE= # 參見資訊 3，此變數可依需求來做配置
 ...
 
 ## Server ENV Configs
@@ -52,6 +53,16 @@ PGADMIN_DEFAULT_PASSWORD= # pgadmin 帳戶密碼。
 >
 > 返回 MapBox 上的 tileset。在螢幕的左側，您會看到一個名為"Vector Layers"的側欄。複製標題下方的圖層名稱（應以"tp_building_height"開頭）。然後，返回到程式庫並移動到`/src/assets/configs/mapbox/mapConfig.js`。找到一個名為"TaipeiBuilding"的物件，並將"source-layer"參數替換為您複製的圖層名稱。
 
+> **i03**
+> 此變數為3.0新增，用於控制個人儀表板的自動更新頻率。可以將此變數留空，之後根據需要配置您的個人儀表板更新頻率。
+>
+> 參數格式定義：個人儀表板index:更新頻率(秒),個人儀表板index:更新頻率(秒)，使用逗號區隔多個儀表板設定。
+> 
+> 配置範例：`VITE_MAPBOXTOKEN`=71528009ae4b:600,415dc056e6df:600,278b42f7d039:600,f7a3542955f1:600
+>
+> 上述範例表示四個不同的儀表板（由index識別），每個儀表板均設定為600秒（10分鐘）自動刷新一次。
+> 
+
 **_looks_4_** 在終端中，依次執行以下指令以建立一個 docker network 並啟動容器。
 
 > **t01**
@@ -75,7 +86,7 @@ docker-compose -f docker-compose-db.yaml up -d
 docker-compose -f docker-compose-init.yaml up -d
 ```
 
-> **i03**
+> **i04**
 > 在 docker-compose-init.yaml 文件中，有三個容器被賦予以下任務：
 >
 > `dashboard-fe-init`：執行 npm install；`dashboard-be-init-manager`：初始化 dashboardmanager DB；`dashboard-be-init-dashboard`：初始化 dashboard DB。
@@ -94,7 +105,7 @@ docker-compose up -d
 >
 > 後端不支持熱重載。如果您對後端程式碼進行了修改，您將需要重啟`dashboard-be`容器。
 
-> **i04**
+> **i05**
 > 從現在開始，如果您想重新初始化資料庫，請按照以下步驟操作：
 >
 > 首先，確保所有相關的容器都已關閉或刪除。接著，刪除 `/docker/db-data` 資料夾。最後，執行上述三個 `docker-compose` 指令。

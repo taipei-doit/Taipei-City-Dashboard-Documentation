@@ -32,9 +32,9 @@ _[使用 API 測試器測試這支 API](/api)_
 **支援的圖表類型：** 圓餅圖(DonutChart)、橫向長條圖(BarChart)、縱向長條圖(ColumnChart)、矩形圖(TreemapChart)、行政區圖(DistrictChart)、捷運行駛圖(MetroChart)、雷達圖(RadarChart)、極座標圖(PolarAreaChart)
 
 > **i01**
-> 行政區圖的 key (x) 必須為台北市 12 個行政區的全名（例如：大安區），並遵循以下順序：
+> 行政區圖的 key (x) 必須為雙北 41 個行政區的全名（例如：大安區），並遵循以下順序：
 >
-> ["北投區", "士林區", "內湖區", "南港區", "松山區", "信義區", "中山區", "大同區", "中正區", "萬華區", "大安區", "文山區"]
+> ["北投區", "士林區", "內湖區", "南港區", "松山區", "信義區", "中山區", "大同區", "中正區", "萬華區", "大安區", "文山區", "新莊區", "淡水區", "汐止區", "板橋區", "三重區", "樹林區", "土城區", "蘆洲區", "中和區", "永和區", "新店區", "鶯歌區", "三峽區", "瑞芳區", "五股區", "泰山區", "林口區", "深坑區", "石碇區", "坪林區", "三芝區", "石門區", "八里區", "平溪區", "雙溪區", "貢寮區", "金山區", "萬里區", "烏來區"]
 
 > **i02**
 > 有關捷運行駛圖的 key-value 格式，請參[下一篇文章](/front-end/supported-chart-types#metro-chart)。
@@ -96,9 +96,9 @@ _[使用 API 測試器測試這支 API](/api)_
 ```
 
 **支援的圖表類型：** 縱向長條圖(ColumnChart)、長條圖(%)(BarPercentChart)、雷達圖(RadarChart)、行政區圖(DistrictChart)、熱力圖(HeatmapChart)、極座標圖(PolarAreaChart)、指標圖(IndicatorChart)
-
+、文字單位圖(TextUnitChart)
 >**i03**
-> 有關指標圖的 key-subcategory-value 格式，請參[下一篇文章](/front-end/supported-chart-types#indicator-chart)。
+> 有關指標圖的 key-subcategory-value 格式，和文字單位圖的具體應用方式請參[下一篇文章](/front-end/supported-chart-types)。
 
 ### 時間序列資料 (time)
 

@@ -12,7 +12,13 @@
 
 `/components` 資料夾儲存較小的 Vue 元件，用於組成使用者介面。
 
-子資料夾 `/components` 儲存組件的版型；子資料夾 `/charts` 儲存各種圖表的版型；子資料夾 `/map` 儲存與地圖相關的 Vue 元件；子資料夾 `/dialogs` 儲存所有彈跳視窗的版型；子資料夾 `/utilities` 儲存與導航、表單等相關的 Vue 元件。
+子資料夾 `/components` 儲存組件的版型；子資料夾 `/charts` 儲存非透過 dashboardComponent 組件去 render 的圖表版型；子資料夾 `/map` 儲存與地圖相關的 Vue 元件；子資料夾 `/dialogs` 儲存所有彈跳視窗的版型；子資料夾 `/utilities` 儲存與導航、表單等相關的 Vue 元件。
+
+### /dashboardComponent
+
+`/dashboardComponent` 資料夾儲存各種透過 dashboardComponent 組件 render 的圖表版型，作為儀表板上動態呈現數據的主要元件。
+
+子資料夾 `/assets` 儲存 dashboardComponent 組件專用的靜態資源，如圖片、圖示等；子資料夾 `/components` 包含所有 dashboardComponent 組件用於渲染各類圖表的版型元件；子資料夾 `/utilities` 提供 dashboardComponent 組件所需的計算函式與資料處理工具。
 
 ### /store
 

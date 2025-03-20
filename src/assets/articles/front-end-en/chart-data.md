@@ -32,9 +32,9 @@ Two-Dimensional Data (henceforth referred to as 2D data) is data that could be f
 **Supported Chart Types:** Donut Chart, Bar Chart, Column Chart, Treemap Chart, District Chart, Metro Chart, Radar Chart, Polar Area Chart
 
 > **i01**
-> If using District Charts, the keys (x) must be the full Mandarin name (e.g. 大安區) of all twelve Taipei City districts in the following order:
+> If using District Charts, the keys (x) must be the full Mandarin name (e.g. 大安區) of all forty-one districts in Taipei City and New Taipei City in the following order:
 >
-> `["北投區", "士林區", "內湖區", "南港區", "松山區", "信義區", "中山區", "大同區", "中正區", "萬華區", "大安區", "文山區"]`
+> `[ "北投區", "士林區", "內湖區", "南港區", "松山區", "信義區", "中山區", "大同區", "中正區", "萬華區", "大安區", "文山區", "新莊區", "淡水區", "汐止區", "板橋區", "三重區", "樹林區", "土城區", "蘆洲區", "中和區", "永和區", "新店區", "鶯歌區", "三峽區", "瑞芳區", "五股區", "泰山區", "林口區", "深坑區", "石碇區", "坪林區", "三芝區", "石門區", "八里區", "平溪區", "雙溪區", "貢寮區", "金山區", "萬里區", "烏來區"]`
 
 > **i02**
 > More details regarding the key-value pairs for Metro Charts are explained in [this later article](/front-end/supported-chart-types#metro-chart).

@@ -16,7 +16,7 @@
 
 [`GET` `/api/v1/dashboard/check-index/:index-to-check`](/back-end/dashboard-apis) 檢查一個 Index 是否可用。
 
-[`POST` `/api/v1/dashboard/public`](/back-end/dashboard-apis) 建立一個公開儀表板。
+[`POST` `/api/v1/dashboard/public/:city`](/back-end/dashboard-apis) 建立一個公開儀表板。
 
 [`PATCH` `/api/v1/dashboard/:index`](/back-end/dashboard-apis) 修改一個公開儀表板。
 
@@ -28,11 +28,11 @@
 
 [`GET` `/api/v1/component`](/back-end/component-config-apis) 回傳所有組件。
 
-[`PATCH` `/api/v1/component/:id`](/back-end/component-config-apis) 修改一個組件。
+[`PATCH` `/api/v1/component/:id?city=`](/back-end/component-config-apis) 修改一個組件。
 
-[`PATCH` `/api/v1/component/:id/chart`](/back-end/component-config-apis) 修改一個組件的圖表設定。
+[`PATCH` `/api/v1/component/:id?city=/chart`](/back-end/component-config-apis) 修改一個組件的圖表設定。
 
-[`PATCH` `/api/v1/component/:id/map`](/back-end/component-config-apis) 修改一個組件的地圖設定。
+[`PATCH` `/api/v1/component/:id?city=/map`](/back-end/component-config-apis) 修改一個組件的地圖設定。
 
 ## 問題管理
 

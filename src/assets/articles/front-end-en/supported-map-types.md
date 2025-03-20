@@ -25,7 +25,8 @@ The complete map config object can be found below.
         "type": "fill", // String; pass in 1 of the 8 available map types
         "size": null, // String || null; additional preset style setting. See next section.
         "icon": null, // String || null; additional preset style setting. See next section
-		"source": "raster" // "raster" || "geojson"
+		"source": "raster", // "raster" || "geojson"
+        "city": // taipei || metrotaipei; Source city of the data
     },
     …
 ],
