@@ -35,7 +35,7 @@ export const MapObjectConfig = {
 
 ### 更改底圖預設添加的圖層
 
-地圖初始化後不久，`mapStore` 的 `initializeBasicLayers` 函式會被呼叫，並在底圖添加了三個預設圖層。其中兩個添加的圖層為台北市的行政區和里界標籤，並以本地 `geojson` 儲存；而第三個則為台北市建築物的 3d 模型，以 Mapbox Tiles 形式儲存，此圖層相關設定請參閱[此先前文章](/front-end/project-setup)。這三個圖層的樣式也儲存在 `mapConfig.js` 文件中。
+地圖初始化後不久，`mapStore` 的 `initializeBasicLayers` 函式會被呼叫，並在底圖添加了三個預設圖層。其中兩個添加的圖層為臺北市的行政區和里界標籤，並以本地 `geojson` 儲存；而第三個則為臺北市建築物的 3d 模型，以 Mapbox Tiles 形式儲存，此圖層相關設定請參閱[此先前文章](/front-end/project-setup)。這三個圖層的樣式也儲存在 `mapConfig.js` 文件中。
 
 如要進行編輯，只需刪除或替換 `initializeBasicLayers` 方法中指定的圖層即可。
 
