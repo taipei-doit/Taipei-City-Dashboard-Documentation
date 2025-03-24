@@ -66,13 +66,13 @@ docker network create --driver=bridge --subnet=192.168.128.0/24 --gateway=192.16
 啟動與 DB 相關的容器。執行此指令後，檢查所有容器是否正在運行。在執行下一個指令之前，請等待資料庫完全初始化（檢查 docker logs 並檢查輸出中是否有 `database system is ready to accept connections`）。
 
 ```bash
-docker-compose -f docker-compose-db.yaml up -d
+docker compose -f docker-compose-db.yaml up -d
 ```
 
 初始化前端和後端環境。此指令建立的容器是暫時性的。請等待容器停止運行後再運行下一個指令。
 
 ```bash
-docker-compose -f docker-compose-init.yaml up -d
+docker compose -f docker-compose-init.yaml up -d
 ```
 
 > **i03**
@@ -86,7 +86,7 @@ docker-compose -f docker-compose-init.yaml up -d
 > 下方指令也會啟動一個 Nginx 服務. 如果您不需要 `https`，請將 `/docker/nginx/conf.d/default.conf` 中 11-15 行註解掉 ; 如需要，請產生一個 ssl 憑證 (`citydashboard-fullchain1.pem`) 與 private key (`citydashboard-privkey.pem`) 並儲存於 `/docker/nginx/ssl`。
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 > **t02**

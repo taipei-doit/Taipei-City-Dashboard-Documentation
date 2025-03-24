@@ -66,13 +66,13 @@ docker network create --driver=bridge --subnet=192.168.128.0/24 --gateway=192.16
 Run DB related containers. After executing this command, check the if all containers are running. Please also wait until the database is fully initialized (check docker logs and see the message, `database system is ready to accept connections`, is present) before running the next command.
 
 ```bash
-docker-compose -f docker-compose-db.yaml up -d
+docker compose -f docker-compose-db.yaml up -d
 ```
 
 Initialize the frontend and backend environments. The containers created via this command are temporary. Please wait until the containers stop running before running the next command.
 
 ```bash
-docker-compose -f docker-compose-init.yaml up -d
+docker compose -f docker-compose-init.yaml up -d
 ```
 
 > **i03**
@@ -86,7 +86,7 @@ Run the frontend and backend services:
 > The following command will also run a nginx service. If you don't require `https`, comment out lines 11-15 in `/docker/nginx/conf.d/default.conf`; If you do, generate a ssl certificate (`citydashboard-fullchain1.pem`) and private key (`citydashboard-privkey.pem`) and store it in `/docker/nginx/ssl`.
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 > **t02**

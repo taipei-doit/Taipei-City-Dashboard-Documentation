@@ -6,13 +6,31 @@ Three tables are used to store the configurations of dashboard components. When 
 
 ## components
 
-`PK` `id` `FK` `index` `map_config_ids`
+`PK` `id`
 
 ```go
 type Component struct {
 	ID             int64           `json:"id"               gorm:"column:id;autoincrement;primaryKey"`
 	Index          string          `json:"index"            gorm:"column:index;type:varchar;unique;not null"     `
 	Name           string          `json:"name"             gorm:"column:name;type:varchar;not null"`
+}
+```
+
+**Columns of Note:**
+More information on front-end requirements for the `components` table can be found in the [here](/front-end/introduction-to-components).
+
+`v3.0.0`
+To support multiple cities, a single Component (component name) can have different QueryCharts (component information) for each city, with an index used for association.
+
+
+
+## query_charts
+
+`FK` `index` `map_config_ids`
+
+```go
+type QueryCharts struct {
+	Index          string          `json:"index"            gorm:"column:index;type:varchar;unique;not null"     `
 	HistoryConfig  json.RawMessage `json:"history_config"   gorm:"column:history_config;type:json"`
 	MapConfigIDs   pq.Int64Array   `json:"-"                gorm:"column:map_config_ids;type:integer[]"`
 	MapConfig      json.RawMessage `json:"map_config"       gorm:"type:json"`
@@ -33,6 +51,7 @@ type Component struct {
 	QueryType      string          `json:"query_type"       gorm:"column:query_type;type:varchar"`
 	QueryChart     string          `json:"-"                gorm:"column:query_chart;type:text"`
 	QueryHistory   string          `json:"-"                gorm:"column:query_history;type:text"`
+	City           string          `json:"city"             gorm:"column:city;type:text"`
 }
 ```
 
@@ -40,7 +59,8 @@ type Component struct {
 
 `map_config_ids` is used solely for the purpose of joining the `components` and `component_maps` tables; `query_chart` and `query_history` store the SQL queries used to retrieve data for the chart and history components respectively. More information on the queries will be disclosed in the [component data APIs article](/back-end/component-data-apis).
 
-More information on front-end requirements for the `components` table can be found in the [here](/front-end/introduction-to-components).
+`v3.0.0`
+The "City" field is required. The currently available values are `taipei` and `metrotaipei`.
 
 ## component_charts
 

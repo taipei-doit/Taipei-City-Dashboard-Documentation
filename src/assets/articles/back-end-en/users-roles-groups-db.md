@@ -69,7 +69,10 @@ type Group struct {
 }
 ```
 
-Any public content is assigned to the `public` group, `id` 1. When a new user is created, a personal group is created for them, and they are assigned to it.
+<!-- Any public content is assigned to the `public` group, `id` 1. When a new user is created, a personal group is created for them, and they are assigned to it. -->
+
+`v3.0.0`
+Added public groups for Taipei (name=taipei) and Metro Taipei (name=metrotaipei).
 
 ## auth_user_group_roles
 
