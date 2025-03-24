@@ -28,12 +28,22 @@ Based on the above vision, we decided to begin development on Taipei City Dashbo
 
 We have since completed the front-end and back-end of Taipei City Dashboard 2.0. From now on, you will be able to suggest features and changes to Taipei City Dashboard and develop the platform alongside us. We are excited for you to join Taipei City Dashboard’s journey!
 
+### Taipei City Dashboard 3.0
+
+As the platform grows and user needs evolve, we are excited to introduce Taipei City Dashboard version 3.0. The most significant change in this update is that our vision is no longer limited to a single city, but expands to a broader geographical scope.
+
+The original "Taipei City Dashboard" has now evolved into a multi-city compatible dashboard framework and for the first time includes a "Taipei and New Taipei Dashboard" feature, integrating important data from Taipei City and New Taipei City to provide a cross-city comprehensive analytical perspective. This is our first step towards integrating data from all of Taiwan.
+
+Our vision is to gradually incorporate data from all counties and cities across Taiwan, establishing a complete city data platform that allows users to compare development indicators of different cities, understand regional trends, and gain more comprehensive data insights.
+
+Taipei City Dashboard 3.0 is not just a presentation of data, but also a microcosm of Taiwan's open data ecosystem. We invite local governments, civic organizations, and data enthusiasts to participate together, making Taipei City Dashboard an important cornerstone for Taiwan's urban governance and data applications.
+
 ## What to Expect from This Documentation
 
-This documentation covers the back-end portion of Taipei City Dashboard 2.0. This documentation will go through every major aspect of this project, providing a thorough understanding of how this project works.
+This documentation covers the back-end portion of Taipei City Dashboard 3.0. This documentation will go through every major aspect of this project, providing a thorough understanding of how this project works.
 
 > **i01**
-> The back-end portion of Taipei City Dashboard 2.0 will henceforth be referred to as **“this project”** throughout the documentation. Unless otherwise specified, all file paths assume `/Taipei-City-Dashboard-BE` as the root directory.
+> The back-end portion of Taipei City Dashboard 3.0 will henceforth be referred to as **“this project”** throughout the documentation. Unless otherwise specified, all file paths assume `/Taipei-City-Dashboard-BE` as the root directory.
 
 > **t01**
 > Please refer [here](/front-end) for the front-end documentation.
