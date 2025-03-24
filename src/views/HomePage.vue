@@ -77,7 +77,7 @@ onMounted(() => {
 					</div>
 				</div>
 			</div>
-			<hr />
+			<!-- <hr />
 			<div class="homepage-utility">
 				<h3>{{ t('more') }}</h3>
 				<div class="homepage-nav">
@@ -94,7 +94,7 @@ onMounted(() => {
 						<span>arrow_circle_right</span>
 					</router-link>
 				</div>
-			</div>
+			</div> -->
 			<br />
 			<br />
 			<br />
