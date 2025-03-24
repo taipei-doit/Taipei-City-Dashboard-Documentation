@@ -61,6 +61,8 @@ _contributors_
 [![蘇詠智](https://avatars.githubusercontent.com/u/43024271?v=4)**蘇詠智**](https://github.com/scott9909041)
 [![蔡誌洧](https://avatars.githubusercontent.com/u/103926221?v=4)**蔡誌洧**](https://github.com/robin502071)
 [![黃筠涵](https://avatars.githubusercontent.com/u/104147108?v=4)**黃筠涵**](https://github.com/yhanh)
+[![蔡豪軒](https://avatars.githubusercontent.com/u/42313425?v=4)**蔡豪軒**](https://github.com/ttom525tw)
+[![鍾華元](https://avatars.githubusercontent.com/u/12794672?v=4)**鍾華元**](https://github.com/Howard-Chung)
 
 ## 聯絡我們
 

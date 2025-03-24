@@ -50,20 +50,15 @@
 
 _contributors_
 [![TUIC](/images/contributors/tuic.png)**臺北大數據中心**](https://tuic.gov.taipei)
-[![何紹宇](/images/contributors/何紹宇.png)**何紹宇**](https://github.com/igorho2000)
-[![施柔安](/images/contributors/施柔安.png)**施柔安**](https://github.com/ann125697)
-[![游璿達](/images/contributors/游璿達.png)**游璿達**](https://github.com/iimahao)
-[![陳威竹](/images/contributors/陳威竹.png)**陳威竹**](https://github.com/Chu-c-git)
-[![黃敬皓](/images/contributors/黃敬皓.png)**黃敬皓**](https://github.com/JHH11)
+[![何紹宇](https://avatars.githubusercontent.com/u/105908220?v=4)**何紹宇**](https://github.com/igorho2000)
+[![游璿達](https://avatars.githubusercontent.com/u/28524902?v=4)**游璿達**](https://github.com/iimahao)
+[![施柔安](https://avatars.githubusercontent.com/u/38744279?v=4)**施柔安**](https://github.com/ann125697)
+[![陳威竹](https://avatars.githubusercontent.com/u/141092596?v=4)**陳威竹**](https://github.com/Chu-c-git)
+[![黃敬皓](https://avatars.githubusercontent.com/u/70930600?v=4)**黃敬皓**](https://github.com/JHH11)
+[![吳沛樺](https://avatars.githubusercontent.com/u/22194851?v=4)**吳沛樺**](https://github.com/power80203)
+[![蔡豪軒](https://avatars.githubusercontent.com/u/42313425?v=4)**蔡豪軒**](https://github.com/ttom525tw)
+[![林耘熙](https://avatars.githubusercontent.com/u/99649841?v=4)**林耘熙**](https://github.com/freetime007)
 
 ## 聯絡我們
 
 tuic@gov.taipei（TUIC 官方電子郵件）
-
-rz3881@gov.taipei（TUIC 資料科學家 游璿達）
-
-cf2118@gov.taipei（TUIC 資料分析師 陳威竹）
-
-ky4097@gov.taipei（TUIC 資料科學家 黃敬皓）
-
-bd2456@gov.taipei（TUIC 系統工程師 施柔安）

@@ -66,7 +66,8 @@ PGADMIN_DEFAULT_PASSWORD= # pgadmin 帳戶密碼。
 **_looks_4_** 在終端中，依次執行以下指令以建立一個 docker network 並啟動容器。
 
 > **t01**
-> 如果您遇到任何問題，請檢查 docker logs。常見的錯誤包括`.env`文件填寫不正確，Docker 引擎未啟動，網絡設定不正確，或者在執行指令之前未刪除`/docker/db-data`資料夾（如果存在）。
+> 如果您遇到任何問題，請檢查 docker logs。常見的錯誤包括`.env`文件填寫不正確，Docker 引擎未啟動，網絡設定不正確，或者在執行指令之前未刪除 volumes(如果存在), 請執行`docker compose -f docker-compose-db.yaml down -v`, 
+
 
 建立一個名為`br_dashboard`的 Docker network。
 
@@ -108,7 +109,7 @@ docker-compose up -d
 > **i05**
 > 從現在開始，如果您想重新初始化資料庫，請按照以下步驟操作：
 >
-> 首先，確保所有相關的容器都已關閉或刪除。接著，刪除 `/docker/db-data` 資料夾。最後，執行上述三個 `docker-compose` 指令。
+> 首先，確保所有相關的容器都已關閉或刪除。接著，刪除volumes `docker compose -f docker-compose-db.yaml down -v`。最後，執行上述三個 `docker-compose` 指令。
 
 **_looks_5_** 專案現在應該已在本地運行。打開您的瀏覽器並開啟 [https://localhost:8080](https://localhost:8080)。您應該會看到儀表板首頁。如要用帳密登入，請打開登入視窗，按住`shift`鍵並點擊 TUIC Logo。如果您遇到任何問題，請檢查 docker logs 或瀏覽器中的 console。
 
