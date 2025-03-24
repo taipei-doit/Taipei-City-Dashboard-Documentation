@@ -55,15 +55,10 @@ _contributors_
 [![游璿達](/images/contributors/游璿達.png)**游璿達**](https://github.com/iimahao)
 [![陳威竹](/images/contributors/陳威竹.png)**陳威竹**](https://github.com/Chu-c-git)
 [![黃敬皓](/images/contributors/黃敬皓.png)**黃敬皓**](https://github.com/JHH11)
+[![吳沛樺](/images/contributors/吳沛樺.png)**吳沛樺**](https://github.com/power80203)
+[![蔡豪軒](/images/contributors/蔡豪軒.png)**蔡豪軒**](https://github.com/ttom525tw)
+[![林耘熙](/images/contributors/林耘熙.png)**林耘熙**](https://github.com/freetime007)
 
 ## 聯絡我們
 
 tuic@gov.taipei（TUIC 官方電子郵件）
-
-rz3881@gov.taipei（TUIC 資料科學家 游璿達）
-
-cf2118@gov.taipei（TUIC 資料分析師 陳威竹）
-
-ky4097@gov.taipei（TUIC 資料科學家 黃敬皓）
-
-bd2456@gov.taipei（TUIC 系統工程師 施柔安）

@@ -153,7 +153,7 @@ PGADMIN_DEFAULT_PASSWORD=default  # new add
 docker-compose -f docker-compose-db.yaml up -d
 ```
 
-上述指令將會創建一個名為 `dashboard` 的資料庫，並默認 e-mail 是 `airflow`，密碼為 `airflow`。資料儲存於本地 volume `./db-data`。
+上述指令將會創建一個名為 `dashboard` 的資料庫，並默認 e-mail 是 `airflow`，密碼為 `airflow`。資料儲存於本地 volumes `./db-data`。
 
 > **i05**
 > 預設 e-mail 和 password 通過 `.env` 中的環境變量設置。

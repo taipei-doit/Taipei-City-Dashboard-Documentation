@@ -120,6 +120,8 @@ _contributors_
 [![謝智正](https://avatars.githubusercontent.com/u/65650108?v=4)**謝智正**](https://github.com/zuchen75)
 [![歐家維](https://avatars.githubusercontent.com/u/111524597?v=4)**歐家維**](https://github.com/jwou0406)
 [![詹彥杰](https://avatars.githubusercontent.com/u/91727472?v=4)**詹彥杰**](https://github.com/zhanyanjie6796)
+[![吳沛樺](https://avatars.githubusercontent.com/u/22194851?v=4)**吳沛樺**](https://github.com/power80203)
+[![林耘熙](https://avatars.githubusercontent.com/u/99649841?v=4)**林耘熙**](https://github.com/freetime007)
 
 ## 聯絡我們
 

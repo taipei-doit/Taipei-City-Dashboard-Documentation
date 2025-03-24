@@ -55,7 +55,7 @@ PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
 **_looks_4_** In the terminal, execute the following commands one by one to create a docker network and start the containers.
 
 > **t01**
-> If you encounter any issues, please check the docker logs. Common mistakes include not filling in the `.env` file correctly, not having the Docker engine running, not having the correct network settings, or not removing the volumes `docker compose -f docker-compose-db.yaml down -v` before running the setup.
+> If you encounter any issues, please check the docker logs. Common mistakes include not filling in the `.env` file correctly, not having the Docker engine running, not having the correct network settings, or not removing the volumes `docker compose -f docker-compose-db.yaml down -v` (if present) before running the setup.
 
 Create a Docker network named `br_dashboard` with a specified subnet.
 
@@ -97,10 +97,8 @@ docker compose up -d
 > **i04**
 > From now on, if you would like to reinitiate the databases, please follow the steps below:
 >
-> Firstly, ensure that all volumes have been deleted. Then, run the above three docker-compose commands.
-```bash
-docker compose -f docker-compose-db.yaml down -v
-```
+> Firstly, ensure that all relevant containers are closed or deleted. Next, delete the volumes `docker compose -f docker-compose-db.yaml down -v` directory. Finally, execute the above three `docker-compose` commands.
+
 
 **_looks_5_** The project should now be running locally. Open your browser and navigate to [https://localhost:8080](https://localhost:8080). You should see the dashboard homepage. To login by email, open the login dialog then hold down `shift` and click the TUIC logo. If you encounter any issues, please check the docker logs or the console in the browser.
 
