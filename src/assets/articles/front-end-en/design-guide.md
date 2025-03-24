@@ -1,6 +1,6 @@
 ## General UI and UX Principles
 
-As a reminder, the main goal of City Dashboard is to provide a user-friendly urban data visualization platform that allows individuals to browse, explore, and cross-reference various datasets reflecting the historical and current status of Taipei City and New Taipei City.
+As a reminder, the main goal of Taipei City Dashboard is to provide a user-friendly urban data visualization platform that allows individuals to browse, explore, and cross-reference various datasets reflecting the historical and current status of Taipei City and New Taipei City.
 
 In line with the above goal, we have laid out several design guidelines to ensure users have a great experience on our platform. It is advised for contributors to follow the below principles when developing to ensure the finished product is visually coherent with other elements in this project. Contributions that obviously disregard any principles below will be asked to be modified or in extreme cases rejected immediately.
 
