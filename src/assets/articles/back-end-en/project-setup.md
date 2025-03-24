@@ -55,7 +55,7 @@ PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
 **_looks_4_** In the terminal, execute the following commands one by one to create a docker network and start the containers.
 
 > **t01**
-> If you encounter any issues, please check the docker logs. Common mistakes include not filling in the `.env` file correctly, not having the Docker engine running, not having the correct network settings, or not removing the volumes `docker compose -f docker-compose-db.yaml down -v` (if present) before running the setup.
+> If you encounter any issues, please check the docker logs. Common mistakes include not filling in the `.env` file correctly, not having the Docker engine running, not having the correct network settings, or not removing the volumes `docker-compose -f docker-compose-db.yaml down -v` (if present) before running the setup.
 
 Create a Docker network named `br_dashboard` with a specified subnet.
 
@@ -66,13 +66,13 @@ docker network create --driver=bridge --subnet=192.168.128.0/24 --gateway=192.16
 Run DB related containers. After executing this command, check the if all containers are running. Please also wait until the database is fully initialized (check docker logs and see the message, `database system is ready to accept connections`, is present) before running the next command.
 
 ```bash
-docker compose -f docker-compose-db.yaml up -d
+docker-compose -f docker-compose-db.yaml up -d
 ```
 
 Initialize the frontend and backend environments. The containers created via this command are temporary. Please wait until the containers stop running before running the next command.
 
 ```bash
-docker compose -f docker-compose-init.yaml up -d
+docker-compose -f docker-compose-init.yaml up -d
 ```
 
 > **i03**
@@ -86,7 +86,7 @@ Run the frontend and backend services:
 > The following command will also run a nginx service. If you don't require `https`, comment out lines 11-15 in `/docker/nginx/conf.d/default.conf`; If you do, generate a ssl certificate (`citydashboard-fullchain1.pem`) and private key (`citydashboard-privkey.pem`) and store it in `/docker/nginx/ssl`.
 
 ```bash
-docker compose up -d
+docker-compose up -d
 ```
 
 > **t02**
@@ -97,7 +97,7 @@ docker compose up -d
 > **i04**
 > From now on, if you would like to reinitiate the databases, please follow the steps below:
 >
-> Firstly, ensure that all relevant containers are closed or deleted. Next, delete the volumes `docker compose -f docker-compose-db.yaml down -v` directory. Finally, execute the above three `docker-compose` commands.
+> Firstly, ensure that all relevant containers are closed or deleted. Next, delete the volumes `docker-compose -f docker-compose-db.yaml down -v` directory. Finally, execute the above three `docker-compose` commands.
 
 
 **_looks_5_** The project should now be running locally. Open your browser and navigate to [https://localhost:8080](https://localhost:8080). You should see the dashboard homepage. To login by email, open the login dialog then hold down `shift` and click the TUIC logo. If you encounter any issues, please check the docker logs or the console in the browser.
