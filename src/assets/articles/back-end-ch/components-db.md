@@ -1,8 +1,8 @@
 ## 概述
 
-本專案使用三個表來儲存儀表板組件的配置。當這些表連接 (join) 起來時，將能組成前端所需的完整[組件配置](/front-end/introduction-to-components)。
+本專案使用四個表來儲存儀表板組件的配置。當這些表連接 (join) 起來時，將能組成前端所需的完整[組件配置](/front-end/introduction-to-components)。
 
-`components` 是主表。它儲存所有組件相關設定，圖表和地圖配置除外。上述兩個配置分別另外儲存在 `component_charts` 和 `component_maps` 表中。`components` 和 `component_charts` 表透過 `components.index` 和 `component_charts.index` 欄連接。而 `components` 和 `component_maps` 表則透過 `components.map_config_ids` 和 `component_maps.id` 欄連接。
+`components` 是主表。它儲存所有組件的index以及名稱，組件的內容存在`query_charts`，圖表和地圖配置除外。上述兩個配置分別另外儲存在 `component_charts` 和 `component_maps` 表中。`components` 和 `query_charts` 表透過 `components.index` 和 `query_charts.index` 欄連接`query_charts` 和 `component_charts` 表透過 `query_charts.index` 和 `component_charts.index` 欄連接。而 `query_charts` 和 `component_maps` 表則透過 `query_charts.map_config_ids` 和 `component_maps.id` 欄連接。
 
 ## components
 
