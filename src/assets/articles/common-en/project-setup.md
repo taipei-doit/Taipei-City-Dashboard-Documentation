@@ -58,7 +58,9 @@ PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
 >
 > Parameter format definition: personal dashboard index:update frequency(seconds),personal dashboard index:update frequency(seconds), using commas to separate multiple dashboard settings.
 > 
-> Configuration example: `VITE_MAPBOXTOKEN`=71528009ae4b:600,415dc056e6df:600,278b42f7d039:600,f7a3542955f1:600
+> Configuration example:
+>  
+> `VITE_PERSONAL_BOARD_UPDATE`=71528009ae4b:600,415dc056e6df:600,278b42f7d039:600,f7a3542955f1:600
 >
 > The above example shows four different dashboards (identified by index), each set to automatically refresh once every 600 seconds (10 minutes).
 > 
