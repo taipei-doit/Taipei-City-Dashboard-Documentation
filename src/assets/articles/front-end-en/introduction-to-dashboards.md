@@ -16,7 +16,7 @@ Regardless of type, all dashboard configurations (Object) are stored in a single
 
 [`GET` `/api/v1/dashboard`](/back-end/dashboard-apis) [`DB` `dashboardmanager.dashboards`](/back-end/dashboards-db)
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 ```json
 {

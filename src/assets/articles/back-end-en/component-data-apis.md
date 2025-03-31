@@ -213,7 +213,7 @@ FROM tp_fet_work_live
 
 `GET` `/component/:id/chart`
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 | Item         | Description                                                                                                |
 | ------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -232,7 +232,7 @@ _[Try out the API in our API Tester](/api)_
 
 `GET` `/component/:id/history`
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 | Item         | Description                                                                                                |
 | ------------ | ---------------------------------------------------------------------------------------------------------- |

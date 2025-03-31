@@ -16,7 +16,7 @@
 
 [`GET` `/api/v1/dashboard`](/back-end/dashboard-apis) [`DB` `dashboardmanager.dashboards`](/back-end/dashboards-db)
 
-_[使用 API 測試器測試這支 API](/api)_
+<!-- _[使用 API 測試器測試這支 API](/api)_ -->
 
 ```json
 {

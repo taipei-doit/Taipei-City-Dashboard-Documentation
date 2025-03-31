@@ -4,7 +4,7 @@
 
 [`GET` `/api/v1/component/:id/chart`](/back-end/component-data-apis) [`DB` `dashboardmanager.components`](/back-end/components-db)
 
-_[使用 API 測試器測試這支 API](/api)_
+<!-- _[使用 API 測試器測試這支 API](/api)_ -->
 
 ### 二維資料 (two_d)
 
