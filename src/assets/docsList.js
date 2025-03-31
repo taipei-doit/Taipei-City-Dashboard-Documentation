@@ -26,7 +26,7 @@ export const docsList = {
 		"customization-overview",
 		"custom-styling",
 		"custom-dialogs",
-		// "custom-charts",
+		"custom-charts",
 		"custom-maps",
 		"create-a-static-application",
 		"#contribution-guide",
