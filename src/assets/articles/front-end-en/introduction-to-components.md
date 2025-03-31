@@ -8,7 +8,7 @@ Each component has three identifying attributes: Index, ID, and City. Among thes
 
 [`GET` `/api/v1/component`](/back-end/component-config-apis) [`DB` `dashboardmanager.components`](/back-end/components-db)
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 ```json
 [{

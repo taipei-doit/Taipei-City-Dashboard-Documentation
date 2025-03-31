@@ -4,7 +4,7 @@ This project currently supports 5 main chart data types. Each data type has a pr
 
 [`GET` `/api/v1/component/:id/chart`](/back-end/component-data-apis) [`DB` `dashboardmanager.components`](/back-end/components-db)
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 ### Two-Dimensional Data (two_d)
 
