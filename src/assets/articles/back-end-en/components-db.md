@@ -1,8 +1,9 @@
 ## Overview
 
-Three tables are used to store the configurations of dashboard components. When joined, the tables provide the complete [component config](/front-end/introduction-to-components) required by the front-end.
+Four tables are used to store the configurations of dashboard components. When joined, the tables provide the complete [component config](/front-end/introduction-to-components) required by the front-end.
 
-`components` is the main table. It stores all component configurations except for chart and map configurations which are stored in `component_charts` and `component_maps` respectively. The `components` and `component_charts` tables are joined via the `components.index` and `component_charts.index` columns. While the `components` and `component_maps` tables are joined via the `components.map_config_ids` and `component_maps.id` columns.
+The `components` table is the main table. It stores the index and name of each component, while the component content is stored in the `query_charts` table, excluding chart and map configurations. These two types of configurations are stored separately in the `component_charts` and `component_maps` tables, respectively.The `components` table is linked to the `query_charts` table through the `components.index` and `query_charts.index` columns. Similarly, the `components` table is linked to the `component_charts` table via the `components.index` and `component_charts.index` columns. The `query_charts` table connects to the `component_maps` table through the `query_charts.map_config_ids` and `component_maps.id` columns.
+
 
 ## components
 
