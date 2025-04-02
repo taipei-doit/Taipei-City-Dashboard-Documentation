@@ -8,11 +8,11 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy project files
-COPY . .
+# We don't need to copy the project files as we'll use a volume mount
+# COPY . .
 
 # Expose port 8082
 EXPOSE 8082
 
-# Command to run the development server on port 8082
+# Default command (can be overridden by docker-compose)
 CMD ["npm", "run", "dev", "--", "--port", "8082", "--host", "0.0.0.0"]
