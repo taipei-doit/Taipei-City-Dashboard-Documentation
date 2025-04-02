@@ -29,7 +29,6 @@ onMounted(() => {
 			src="public/images/contributors/doit.png" 
 			alt="doit logo"
 			:style="{
-				filter: appStore.mode === 'dark' ? 'invert(1)' : 'none',
 				height: '40px',
 				width: 'auto'
 			}"
