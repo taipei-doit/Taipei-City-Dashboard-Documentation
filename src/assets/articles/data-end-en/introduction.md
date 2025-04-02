@@ -14,12 +14,12 @@
 
 ## 授權和版權
 
-本專案的程式碼是以[AGPL-3 許可證](https://github.com/tpe-doit/Taipei-City-Dashboard/blob/main/LICENSE)下發行，允許任何形式的修改和商業化。但是，如果你使用我們的程式庫，請務必歸屬我們，且你對程式庫進行任何改動後，也必須將你修改的版本公開釋出，供本產品的其他使用者參考。
+本專案的程式碼是以[AGPL-3 許可證](https://github.com/tpipei-doit/Taipei-City-Dashboard/blob/main/LICENSE)下發行，允許任何形式的修改和商業化。但是，如果你使用我們的程式庫，請務必歸屬我們，且你對程式庫進行任何改動後，也必須將你修改的版本公開釋出，供本產品的其他使用者參考。
 
 ## 專案貢獻者
 
 _contributors_
-[![TUIC](/images/contributors/tuic.png)**臺北大數據中心**](https://tuic.gov.taipei)
+[![DOIT](/images/contributors/doit.png)**臺北市資訊局**](https://tuic.gov.taipei)
 [![何紹宇](/images/contributors/何紹宇.png)**何紹宇**](https://github.com/igorho2000)
 [![施柔安](/images/contributors/施柔安.png)**施柔安**](https://github.com/ann125697)
 [![游璿達](/images/contributors/游璿達.png)**游璿達**](https://github.com/iimahao)
@@ -31,4 +31,4 @@ _contributors_
 
 ## 聯絡我們
 
-tuic@gov.taipei（TUIC 官方電子郵件）
+tuic@gov.taipei（DOIT 官方電子郵件）

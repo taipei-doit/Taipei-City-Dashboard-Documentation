@@ -2,7 +2,7 @@
 
 This project uses Taipei Pass (台北通) as its primary authentication system. However, due to security concerns, we are unable to provide the relevant urls, client ids, and scopes to external developers.
 
-As such, we have also implemented a basic email authentication system for external developers to use which is only available in development mode. During development, open up the login popup as usual, press down `shift` and click on the TUIC logo. This will switch the login mode to email authentication.
+As such, we have also implemented a basic email authentication system for external developers to use which is only available in development mode. During development, open up the login popup as usual, press down `shift` and click on the DOIT logo. This will switch the login mode to email authentication.
 
 The email and password to use are the ones you filled into the .env file when first setting up the project. For more information, please refer to [this previous article](/back-end/project-setup).
 

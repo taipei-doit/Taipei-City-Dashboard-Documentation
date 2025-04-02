@@ -30,7 +30,7 @@ Each component has three identifying attributes: Index, ID, and City. Among thes
     "use_case": "...", // String; use case description
     "links": ["https://…", ...], // Array of Strings || null; raw data sources
     "tags": ["..."], // Array; of tags that describe the component
-	"contributors": ["tuic", ...], // Array of Strings; contributor id
+	"contributors": ["doit", ...], // Array of Strings; contributor id
     "city": "taipei", // taipei || metrotaipei; Source city of the data. See 6th info box below for details
 }]
 ```

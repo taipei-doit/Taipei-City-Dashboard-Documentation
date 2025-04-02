@@ -18,7 +18,7 @@
 > import os
 > import sys
 >
-> dags_path = os.path.join(os.getcwd(), 'dags')  # Should be looks like './tuic-pipeline-airflow/dags'
+> dags_path = os.path.join(os.getcwd(), 'dags') 
 > sys.path.append(dags_path)
 > ```
 

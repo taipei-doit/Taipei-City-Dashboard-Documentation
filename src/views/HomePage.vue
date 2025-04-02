@@ -37,7 +37,7 @@ onMounted(() => {
 						<a :href="appStore.lang === 'en' ? 'https://www.youtube.com/watch?v=kJsIsQ_3uLc' : 'https://www.youtube.com/watch?v=07FODlTV74g'"
 							target="_blank" rel="noreferrer"><button class="gray">{{ t('about-us')
 								}}<span>play_circle</span></button></a><a
-							href="https://github.com/tpe-doit/Taipei-City-Dashboard" target="_blank"
+							href="https://github.com/tpipei-doit/Taipei-City-Dashboard" target="_blank"
 							rel="noreferrer"><button class="github">{{ t('github') }}<img
 									src="../assets/images/github-mark.svg" /></button></a>
 						<a href="https://citydashboard.taipei" target="_blank" rel="noreferrer"><button>{{

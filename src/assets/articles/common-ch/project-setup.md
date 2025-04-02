@@ -1,6 +1,6 @@
 ## 在本地運行專案
 
-**_looks_one_** Fork [專案程式庫](https://github.com/tpe-doit/Taipei-City-Dashboard)，然後將專案 clone 到您的電腦。用 VSCode 或您偏好的程式編輯器開啟程式庫。
+**_looks_one_** Fork [專案程式庫](https://github.com/tpipei-doit/Taipei-City-Dashboard)，然後將專案 clone 到您的電腦。用 VSCode 或您偏好的程式編輯器開啟程式庫。
 
 **_looks_two_** 透過開啟 Docker Desktop 或使用終端啟動 Docker 引擎。然後，開啟程式庫終端並移動至 `/docker` 資料夾 (`cd docker`)。
 
@@ -113,7 +113,7 @@ docker-compose up -d
 >
 > 首先，確保所有相關的容器都已關閉或刪除。接著，刪除volumes `docker compose -f docker-compose-db.yaml down -v`。最後，執行上述三個 `docker-compose` 指令。
 
-**_looks_5_** 專案現在應該已在本地運行。打開您的瀏覽器並開啟 [https://localhost:8080](https://localhost:8080)。您應該會看到儀表板首頁。如要用帳密登入，請打開登入視窗，按住`shift`鍵並點擊 TUIC Logo。如果您遇到任何問題，請檢查 docker logs 或瀏覽器中的 console。
+**_looks_5_** 專案現在應該已在本地運行。打開您的瀏覽器並開啟 [https://localhost:8080](https://localhost:8080)。您應該會看到儀表板首頁。如要用帳密登入，請打開登入視窗，按住`shift`鍵並點擊 DOIT Logo。如果您遇到任何問題，請檢查 docker logs 或瀏覽器中的 console。
 
 ## 進一步的開發設定
 

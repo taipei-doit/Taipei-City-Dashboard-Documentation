@@ -16,12 +16,12 @@ If you come across any issues or typos in this documentation, feel free to click
 
 ## License and Copyright
 
-The codebase for this project is released under the [AGPL-3 License](https://github.com/tpe-doit/Taipei-City-Dashboard/blob/main/LICENSE), which permits any type of modification and commercialization. However, if you use our codebase in any way, you must provide attribution. In addition, all modifications should be made available for other users of this product.
+The codebase for this project is released under the [AGPL-3 License](https://github.com/tpipei-doit/Taipei-City-Dashboard/blob/main/LICENSE), which permits any type of modification and commercialization. However, if you use our codebase in any way, you must provide attribution. In addition, all modifications should be made available for other users of this product.
 
 ## Contributors
 
 _contributors_
-[![TUIC](/images/contributors/tuic.png)**TUIC**](https://tuic.gov.taipei)
+[![DOIT](/images/contributors/doit.png)**DOIT**](https://tuic.gov.taipei)
 [![何紹宇](https://avatars.githubusercontent.com/u/105908220?v=4)**何紹宇**](https://github.com/igorho2000)
 [![游璿達](https://avatars.githubusercontent.com/u/28524902?v=4)**游璿達**](https://github.com/iimahao)
 [![施柔安](https://avatars.githubusercontent.com/u/38744279?v=4)**施柔安**](https://github.com/ann125697)
@@ -86,5 +86,5 @@ _contributors_
 
 ## Contact Us
 
-tuic@gov.taipei (TUIC Official Email)
+tuic@gov.taipei (DOIT Official Email)
 

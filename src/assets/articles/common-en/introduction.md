@@ -1,10 +1,10 @@
 ## About Taipei City Dashboard
 
-Taipei City Dashboard is a data visualization platform developed by Taipei Urban Intelligence Center (TUIC).
+Taipei City Dashboard is a data visualization platform developed by Taipei Urban Intelligence Center (DOIT).
 
 Our main goal is to create a comprehensive data visualization tool to assist in Taipei City policy decisions. This was achieved through the first version of the Taipei City Dashboard, which displayed a mix of internal and open data, seamlessly blending statistical and geographical data.
 
-Since its launch in 2021, Taipei City Dashboard has played an important role in assisting Taipei City government officials in making informed policy decisions. Learn more about how the idea for Taipei City Dashboard was developed and refined in [this article](https://tuic.gov.taipei/en/works/dashboard) on TUIC’s website.
+Since its launch in 2021, Taipei City Dashboard has played an important role in assisting Taipei City government officials in making informed policy decisions. Learn more about how the idea for Taipei City Dashboard was developed and refined in [this article](https://tuic.gov.taipei/en/works/dashboard) on DOIT’s website.
 
 ## Why City Dashboard
 

@@ -188,5 +188,5 @@ Password: airflow
 
 ### 第五步：完成
 
-資料復原過程完成後，你應該已經準備好臺北大數據中心團隊提供的 Airflow 運行所需的資料庫 schema。你可以在 pdAmin 介面中依次點開 dashboard-data -> Databases -> dashboard -> Schemas -> public -> Tables 查看所有表格，並透過 Airflow 網頁介面運行你的資料流。
+資料復原過程完成後，你應該已經準備好臺北市資訊局團隊提供的 Airflow 運行所需的資料庫 schema。你可以在 pdAmin 介面中依次點開 dashboard-data -> Databases -> dashboard -> Schemas -> public -> Tables 查看所有表格，並透過 Airflow 網頁介面運行你的資料流。
 

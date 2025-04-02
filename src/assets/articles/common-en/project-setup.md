@@ -1,6 +1,6 @@
 ## Running the Project Locally
 
-**_looks_one_** Fork [the project repository](https://github.com/tpe-doit/Taipei-City-Dashboard) then clone the project to your computer. Open the repository with VSCode or your preferred code editor.
+**_looks_one_** Fork [the project repository](https://github.com/tpipei-doit/Taipei-City-Dashboard) then clone the project to your computer. Open the repository with VSCode or your preferred code editor.
 
 **_looks_two_** Start the Docker engine via opening Docker Desktop or the command line. Then, open the repository terminal and change the directory to `/docker` (`cd docker`).
 
@@ -112,7 +112,7 @@ docker-compose up -d
 >
 > Firstly, ensure that all relevant containers are closed or deleted. Next, delete the volumes `docker compose -f docker-compose-db.yaml down -v` directory. Finally, execute the above three `docker-compose` commands.
 
-**_looks_5_** The project should now be running locally. Open your browser and navigate to [https://localhost:8080](https://localhost:8080). You should see the dashboard homepage. To login by email, open the login dialog then hold down `shift` and click the TUIC logo. If you encounter any issues, please check the docker logs or the console in the browser.
+**_looks_5_** The project should now be running locally. Open your browser and navigate to [https://localhost:8080](https://localhost:8080). You should see the dashboard homepage. To login by email, open the login dialog then hold down `shift` and click the DOIT logo. If you encounter any issues, please check the docker logs or the console in the browser.
 
 ## Further Development Setup
 
