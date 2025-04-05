@@ -26,7 +26,7 @@ onMounted(() => {
 	<div class="navbar">
 		<a class="navbar-logo" :href="`${BASE_URL}/`">
 			<img 
-			src="src/assets/images/doit.png" 
+			src="/images/contributors/doit.png" 
 			alt="doit logo"
 			:style="{
 				height: '40px',
