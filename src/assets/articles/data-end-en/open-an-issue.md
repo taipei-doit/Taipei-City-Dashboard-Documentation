@@ -1,6 +1,6 @@
 
 
-本專案的所有新開發都需要有至少一個 issue。如要開立一個 issue，請前往 [GitHub](https://github.com/tpe-doit/Taipei-City-Dashboard-Data-End/issues/new/choose) 的 issues 頁面選擇其中一種 issue 類型。你必須完整填寫模板才會被考慮與審查。沒有提供明確指引或描述的 issue 可能會被立即關閉。
+本專案的所有新開發都需要有至少一個 issue。如要開立一個 issue，請前往 [GitHub](https://github.com/tpipei-doit/Taipei-City-Dashboard-Data-End/issues/new/choose) 的 issues 頁面選擇其中一種 issue 類型。你必須完整填寫模板才會被考慮與審查。沒有提供明確指引或描述的 issue 可能會被立即關閉。
 
 建議先等待 issue 被批准再開發，因為所有 pull request 需要解決至少一個已批准的 issue 才能被考慮與審查。下面解釋了每種 issue 類型的批准標準。
 

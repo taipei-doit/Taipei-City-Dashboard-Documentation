@@ -37,7 +37,7 @@ onMounted(() => {
 						<a :href="appStore.lang === 'en' ? 'https://www.youtube.com/watch?v=kJsIsQ_3uLc' : 'https://www.youtube.com/watch?v=07FODlTV74g'"
 							target="_blank" rel="noreferrer"><button class="gray">{{ t('about-us')
 								}}<span>play_circle</span></button></a><a
-							href="https://github.com/tpe-doit/Taipei-City-Dashboard" target="_blank"
+							href="https://github.com/tpipei-doit/Taipei-City-Dashboard" target="_blank"
 							rel="noreferrer"><button class="github">{{ t('github') }}<img
 									src="../assets/images/github-mark.svg" /></button></a>
 						<a href="https://citydashboard.taipei" target="_blank" rel="noreferrer"><button>{{
@@ -72,15 +72,12 @@ onMounted(() => {
 					<h3>{{ t('data-end.name') }}{{ t('docs') }}</h3>
 					<h4>{{ t('data-end.desc') }}</h4>
 					<div>
-						<a href="https://github.com/tpe-doit/Taipei-City-Dashboard-DE-Hackathon-2024" target="_blank"
-							rel="noreferrer"><button class="github">{{ t('github') }}<img
-									src="../assets/images/github-mark.svg" /></button></a>
 						<router-link to="/data-end"><button>{{ t('get-started')
 								}}<span>east</span></button></router-link>
 					</div>
 				</div>
 			</div>
-			<hr />
+			<!-- <hr />
 			<div class="homepage-utility">
 				<h3>{{ t('more') }}</h3>
 				<div class="homepage-nav">
@@ -97,7 +94,7 @@ onMounted(() => {
 						<span>arrow_circle_right</span>
 					</router-link>
 				</div>
-			</div>
+			</div> -->
 			<br />
 			<br />
 			<br />

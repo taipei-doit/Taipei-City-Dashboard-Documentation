@@ -4,7 +4,7 @@
 
 `GET` `/api/v1/dashboard`
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 | Item        | Description                                                                       |
 | ----------- | --------------------------------------------------------------------------------- |

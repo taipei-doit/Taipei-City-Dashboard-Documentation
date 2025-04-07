@@ -6,7 +6,7 @@ defineProps(['docs', 'docslist']);
 const { t } = useI18n();
 const appStore = useAppStore();
 
-const appVersion = "v2.2.0";
+const appVersion = "v3.0.0";
 </script>
 
 <template>

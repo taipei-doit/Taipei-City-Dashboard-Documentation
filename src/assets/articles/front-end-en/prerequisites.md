@@ -36,9 +36,5 @@ Mapbox is a powerful mapping tool that builds on top of OpenStreetMap. The docum
 
 Axios is used for making HTTP requests. The documentation for Axios can be found [here](https://axios-http.com/docs/intro).
 
-### City Dashboard Component
-
-All different forms of components in the dashboard utilize this package. The documentation can be found [here](https://www.npmjs.com/package/city-dashboard-component).
-
 > **t01**
 > If you are new to front-end development, we recommend first familiarizing yourself with the basics of HTML, CSS, and JavaScript before moving on to a web framework like Vue. [Scrimba](https://scrimba.com/allcourses), [Codecademy](https://www.codecademy.com/), [W3Schools](https://www.w3schools.com/), and [FreeCodeCamp](https://www.freecodecamp.org/) are all great resources for learning the basics of web development.

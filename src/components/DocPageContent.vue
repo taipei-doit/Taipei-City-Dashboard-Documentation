@@ -9,6 +9,7 @@ const props = defineProps(['docs', 'id']);
 const appStore = useAppStore();
 
 const doctext = ref('');
+const sharedContent = ref({});
 
 const parsedDoctext = computed(() => {
 	const renderer = {
@@ -82,6 +83,13 @@ const parsedDoctext = computed(() => {
 				const parsedContributors = text.replaceAll('<em>contributors</em>', '').replaceAll('<strong>', '<p>').replaceAll('</strong>', '</p>');
 				return `<div class="docpagecontent-contributors">${parsedContributors}</div>`;
 			}
+			// replace <tpl> tag
+			const tplRegex = /<tpl>(.*?)<\/tpl>/g;
+			text = text.replace(tplRegex, (_, name) => {
+				text += sharedContent.value[name] || '';
+				return sharedContent.value[name] || '';
+			});
+
 			const parsedText = text.replaceAll('<em><strong>', '<span>').replaceAll('<strong><em>', '<span>').replaceAll('</strong></em>', '</span>').replaceAll('</em></strong>', '</span>');
 			return `<p>${parsedText}</p>`;
 		},
@@ -95,15 +103,35 @@ const parsedDoctext = computed(() => {
 });
 
 onMounted(async () => {
+	// const module = await import(`../assets/articles/${props.docs}-${appStore.lang}/${props.id}.md`);
+	// fetch(module.default).then(async res => {
+	// 	return await res.text();
+	// }).then(text => {
+	// 	doctext.value = text;
+	// 	setTimeout(() => {
+	// 		hljs.highlightAll();
+	// 	}, 50);
+	// });
+
+	// get template from common files
 	const module = await import(`../assets/articles/${props.docs}-${appStore.lang}/${props.id}.md`);
-	fetch(module.default).then(async res => {
-		return await res.text();
-	}).then(text => {
-		doctext.value = text;
-		setTimeout(() => {
-			hljs.highlightAll();
-		}, 50);
-	});
+	const mainContent = await fetch(module.default).then(res => res.text());
+	const commonFiles = {
+		ch: import.meta.glob('../assets/articles/common-ch/*.md'),
+		en: import.meta.glob('../assets/articles/common-en/*.md'),
+	}
+
+	for (const [path, loader] of Object.entries(commonFiles[appStore.lang])) {
+		const name = path.split('/').pop().replace('.md', '');
+		const sharedText = await loader().then(res => fetch(res.default).then(res => res.text()));
+		sharedContent.value[name] = marked.parse(sharedText);
+	}
+	
+	doctext.value = mainContent;
+
+	setTimeout(() => {
+		hljs.highlightAll();
+	}, 50);
 })
 
 </script>

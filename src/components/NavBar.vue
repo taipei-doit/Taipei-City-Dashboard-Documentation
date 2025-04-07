@@ -25,8 +25,14 @@ onMounted(() => {
 <template>
 	<div class="navbar">
 		<a class="navbar-logo" :href="`${BASE_URL}/`">
-			<img src="../assets/images/TUIC.svg" alt="tuic logo"
-				:style="{ filter: appStore.mode === 'dark' ? 'invert(1)' : 'none' }" />
+			<img 
+			src="/images/contributors/doit.png" 
+			alt="doit logo"
+			:style="{
+				height: '40px',
+				width: 'auto'
+			}"
+			/>
 			<div>
 				<h1>臺北城市儀表板文件</h1>
 				<h2>Taipei City Dashboard Documentation</h2>

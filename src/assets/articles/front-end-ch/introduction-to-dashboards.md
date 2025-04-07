@@ -2,9 +2,9 @@
 
 儀表板是相關或互補的組件集合。除了一般的儀表板外，另有兩種特殊類型，以更好地顯示特殊的組件類別。
 
-### 地圖圖層
+### 圖資資訊圖層
 
-地圖圖層儀表板是一個特殊的儀表板，僅儲存包含空間資料的組件。
+圖資資訊圖層儀表板是一個特殊的儀表板，僅儲存包含空間資料的組件。
 
 ### 收藏
 
@@ -16,7 +16,7 @@
 
 [`GET` `/api/v1/dashboard`](/back-end/dashboard-apis) [`DB` `dashboardmanager.dashboards`](/back-end/dashboards-db)
 
-_[使用 API 測試器測試這支 API](/api)_
+<!-- _[使用 API 測試器測試這支 API](/api)_ -->
 
 ```json
 {

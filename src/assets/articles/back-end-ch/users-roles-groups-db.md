@@ -69,7 +69,10 @@ type Group struct {
 }
 ```
 
-任何公開內容都會被分配到 `public` 群組，`id` 為 1。當建立新用戶時，應用程式會為他們建立一個私人群組，並將新用戶分配到該群組。
+<!-- 任何公開內容都會被分配到 `public` 群組，`id` 為 1。當建立新用戶時，應用程式會為他們建立一個私人群組，並將新用戶分配到該群組。 -->
+
+`v3.0.0`
+新增了台北 (name=taipei)，雙北 (name=metrotaipei) public group。
 
 ## auth_user_group_roles
 

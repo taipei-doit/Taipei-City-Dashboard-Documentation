@@ -4,18 +4,18 @@ Components are collections of data that make up dashboards. All components, cont
 
 ## Component Configuration
 
-Each component has two unique identification codes: ID and Index. The ID is a unique serial number for the component, while the Index is an English string that makes it easier to identify the content of the component. Component configurations (Object) are returned in an array. The complete list of parameters can be found below.
+Each component has three identifying attributes: Index, ID, and City. Among these, Index is a unique identification code, a distinct English string that facilitates identification of component content; ID represents the data type number, with the same type of data across different cities sharing the same ID; and City indicates the source city of the data. Components with the same ID share the same name and chart_config settings, ensuring consistent presentation of cross-city data. Component configurations (Object) are returned in an array. The complete list of parameters can be found below.
 
 [`GET` `/api/v1/component`](/back-end/component-config-apis) [`DB` `dashboardmanager.components`](/back-end/components-db)
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 ```json
 [{
-    "id": 7, // Number; Unique serial number
+    "id": 7, // Number; Must be identical to the filenames of statistical data and historical data
     "index": "patrol_criminalcase", // String; index
 	"chart_config": {},  // Object; see 1st info box below for details
-	"query_data": "time", // two_d || three_d || time || percent || map_legend; chart data type
+	"query_type": "time", // two_d || three_d || time || percent || map_legend; chart data type
     "map_config": null, // Object || null; see 2nd info box below for details
 	"map_filter": null, // Object || null; see 3rd info box below for details
 	"history_config": null, // Object || null; see 4th info box below for details
@@ -30,7 +30,8 @@ _[Try out the API in our API Tester](/api)_
     "use_case": "...", // String; use case description
     "links": ["https://…", ...], // Array of Strings || null; raw data sources
     "tags": ["..."], // Array; of tags that describe the component
-	"contributors": ["tuic", ...] // Array of Strings; contributor id
+	"contributors": ["doit", ...], // Array of Strings; contributor id
+    "city": "taipei", // taipei || metrotaipei; Source city of the data. See 6th info box below for details
 }]
 ```
 
@@ -50,3 +51,8 @@ _[Try out the API in our API Tester](/api)_
 > For components that display static or demo data, pass in `static` or `demo`. For components that display the newest data available, pass in `current`. For components that display data since a certain time ago, pass in `day_ago`, `week_ago`, `month_ago`, `quarter_ago`, `halfyear_ago`, `year_ago`, `twoyear_ago`, `fiveyear_ago`, `tenyear_ago`, or `max`. For components that display data since the beginning of a certain time, pass in `day_start`, `week_start`, `month_start`, `quarter_start` or `year_start`.
 >
 > The application will calculate the specific dates and times to query the back-end for data.
+
+> **i06**
+> All general components have a city field that identifies the source city of the component data, which is an important identifying attribute in multi-city dashboards. Currently supported values include: `taipei`: Taipei City data, `metrotaipei`: integrated data for both Taipei and New Taipei City
+>
+> Components with the same ID share the same name and chart_config settings across different cities, but the data sources and content will vary according to the city. The range of supported cities will continue to be expanded in the future, while maintaining the consistency of the component structure.

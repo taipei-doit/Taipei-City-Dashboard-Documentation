@@ -153,7 +153,7 @@ PGADMIN_DEFAULT_PASSWORD=default  # new add
 docker-compose -f docker-compose-db.yaml up -d
 ```
 
-上述指令將會創建一個名為 `dashboard` 的資料庫，並默認 e-mail 是 `airflow`，密碼為 `airflow`。資料儲存於本地 volume `./db-data`。
+上述指令將會創建一個名為 `dashboard` 的資料庫，並默認 e-mail 是 `airflow`，密碼為 `airflow`。資料儲存於本地 volumes `./db-data`。
 
 > **i05**
 > 預設 e-mail 和 password 通過 `.env` 中的環境變量設置。
@@ -188,5 +188,5 @@ Password: airflow
 
 ### 第五步：完成
 
-資料復原過程完成後，你應該已經準備好臺北大數據中心團隊提供的 Airflow 運行所需的資料庫 schema。你可以在 pdAmin 介面中依次點開 dashboard-data -> Databases -> dashboard -> Schemas -> public -> Tables 查看所有表格，並透過 Airflow 網頁介面運行你的資料流。
+資料復原過程完成後，你應該已經準備好臺北市資訊局團隊提供的 Airflow 運行所需的資料庫 schema。你可以在 pdAmin 介面中依次點開 dashboard-data -> Databases -> dashboard -> Schemas -> public -> Tables 查看所有表格，並透過 Airflow 網頁介面運行你的資料流。
 

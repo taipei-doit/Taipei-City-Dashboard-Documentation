@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "98236b95-f7f8-400c-90d4-248644bc30ac",
+		"_postman_id": "a8bfc6e6-01e5-43f4-834b-d071e57d0e89",
 		"name": "Dashboard",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "28327543",
-		"_collection_link": "https://tuic-dev.postman.co/workspace/Taipei-City-Dashboard-BE~29c09118-3b12-42f9-b5b6-289b92291fa6/collection/28327543-98236b95-f7f8-400c-90d4-248644bc30ac?action=share&source=collection_link&creator=28327543"
+		"_exporter_id": "3381830"
 	},
 	"item": [
 		{
@@ -33,8 +32,13 @@
 						],
 						"url": {
 							"raw": "{{url}}/{{version}}/component?sort=id&order=desc",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "component"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"component"
+							],
 							"query": [
 								{
 									"key": "pagesize",
@@ -82,6 +86,11 @@
 									"key": "searchbyname",
 									"value": "",
 									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "metrotaipei",
+									"disabled": true
 								}
 							]
 						}
@@ -104,13 +113,25 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/{{version}}/component/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "component", ":id"],
+							"raw": "{{url}}/{{version}}/component/:id?city=metrotaipei",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"component",
+								":id"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "metrotaipei"
+								}
+							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "43"
+									"value": "60"
 								}
 							]
 						}
@@ -146,8 +167,10 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/{{version}}/component/:id/chart?timefrom=2023-04-11T17:17:56+08:00&timeto=2024-01-11T17:17:56+08:00",
-							"host": ["{{url}}"],
+							"raw": "{{url}}/{{version}}/component/:id/chart?timefrom=2023-04-11T17:17:56%2B08:00&timeto=2024-01-11T17:17:56%2B08:00&city=metrotaipei",
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"component",
@@ -157,17 +180,21 @@
 							"query": [
 								{
 									"key": "timefrom",
-									"value": "2023-04-11T17:17:56+08:00"
+									"value": "2023-04-11T17:17:56%2B08:00"
 								},
 								{
 									"key": "timeto",
-									"value": "2024-01-11T17:17:56+08:00"
+									"value": "2024-01-11T17:17:56%2B08:00"
+								},
+								{
+									"key": "city",
+									"value": "metrotaipei"
 								}
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "5"
+									"value": "60"
 								}
 							]
 						}
@@ -203,8 +230,10 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/{{version}}/component/:id/history?timefrom=2024-01-08T17:14:24+08:00&timeto=2024-01-11T17:14:24+08:00",
-							"host": ["{{url}}"],
+							"raw": "{{url}}/{{version}}/component/:id/history?timefrom=2024-01-08T17:14:24%2B08:00&timeto=2024-01-11T17:14:24%2B08:00&city=metrotaipei",
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"component",
@@ -214,17 +243,21 @@
 							"query": [
 								{
 									"key": "timefrom",
-									"value": "2024-01-08T17:14:24+08:00"
+									"value": "2024-01-08T17:14:24%2B08:00"
 								},
 								{
 									"key": "timeto",
-									"value": "2024-01-11T17:14:24+08:00"
+									"value": "2024-01-11T17:14:24%2B08:00"
+								},
+								{
+									"key": "city",
+									"value": "metrotaipei"
 								}
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "60"
 								}
 							]
 						}
@@ -248,7 +281,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"index\": \"asdasd\",\n    \"update_freq\": 0\n}",
+							"raw": "{\n    \"index\": \"youbike_availability\",\n    \"name\": \"YouBike使用情況。\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -256,13 +289,25 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/{{version}}/component/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "component", ":id"],
+							"raw": "{{url}}/{{version}}/component/:id?city=taipei",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"component",
+								":id"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "taipei"
+								}
+							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "164"
+									"value": "60"
 								}
 							]
 						}
@@ -286,7 +331,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"types\": [\"DistrictChart\", \"BarChart\"],\n    \"unit\": \"件\"\n}",
+							"raw": "{\n    \"types\": [\"GuageChart\", \"BarPercentChart\"],\n    \"unit\": \"輛\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -294,18 +339,26 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/{{version}}/component/:id/chart",
-							"host": ["{{url}}"],
+							"raw": "{{url}}/{{version}}/component/:id/chart?city=taipei",
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"component",
 								":id",
 								"chart"
 							],
+							"query": [
+								{
+									"key": "city",
+									"value": "taipei"
+								}
+							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "20"
+									"value": "60"
 								}
 							]
 						}
@@ -329,7 +382,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"自行車道\",\n    \"type\": \"line\"\n}",
+							"raw": "{\n    \"title\": \"自行車路網\",\n    \"type\": \"line\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -337,13 +390,26 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/{{version}}/component/:id/map",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "component", ":id", "map"],
+							"raw": "{{url}}/{{version}}/component/:id/map?city=taipei",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"component",
+								":id",
+								"map"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "taipei"
+								}
+							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "100"
 								}
 							]
 						}
@@ -367,12 +433,18 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/component/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "component", ":id"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"component",
+								":id"
+							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "70"
+									"value": "1"
 								}
 							]
 						}
@@ -407,8 +479,13 @@
 						],
 						"url": {
 							"raw": "{{url}}/{{version}}/dashboard",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "dashboard"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"dashboard"
+							]
 						}
 					},
 					"response": []
@@ -430,8 +507,14 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/dashboard/:index",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "dashboard", ":index"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"dashboard",
+								":index"
+							],
 							"variable": [
 								{
 									"key": "index",
@@ -456,7 +539,8 @@
 									"// 將JWT設定為Postman變數",
 									"pm.environment.set(\"jwt_token\", jwtToken);"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -475,7 +559,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Last attempt\",\n    \"components\": [],\n    \"icon\": \"test\"\n}",
+							"raw": "{\n    \"name\": \"my youbike\",\n    \"components\": [60,146],\n    \"icon\": \"star\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -484,8 +568,13 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/dashboard",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "dashboard"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"dashboard"
+							]
 						}
 					},
 					"response": []
@@ -496,8 +585,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"exec": [""],
-								"type": "text/javascript"
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -516,7 +608,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"index\": \"test3\",\n    \"name\": \"test\",\n    \"components\": [],\n    \"icon\": \"test\"\n}",
+							"raw": "{\n    \"index\": \"test4\",\n    \"name\": \"test2\",\n    \"components\": [],\n    \"icon\": \"test2\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -524,9 +616,21 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/{{version}}/dashboard/public",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "dashboard", "public"]
+							"raw": "{{url}}/{{version}}/dashboard/public?city=taipei",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"dashboard",
+								"public"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "taipei"
+								}
+							]
 						}
 					},
 					"response": []
@@ -548,7 +652,9 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/dashboard/check-index/:index",
-							"host": ["{{url}}"],
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"dashboard",
@@ -558,7 +664,7 @@
 							"variable": [
 								{
 									"key": "index",
-									"value": "18ba1c7dacfc"
+									"value": "abc123"
 								}
 							]
 						}
@@ -582,7 +688,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"社會安全\"\n}",
+							"raw": "{\n    \"name\": \"務實交通\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -591,12 +697,18 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/dashboard/:index",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "dashboard", ":index"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"dashboard",
+								":index"
+							],
 							"variable": [
 								{
 									"key": "index",
-									"value": "test3"
+									"value": "practical_transportation_tpe"
 								}
 							]
 						}
@@ -617,7 +729,8 @@
 									"// 將JWT設定為Postman變數",
 									"pm.environment.set(\"jwt_token\", jwtToken);"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -636,12 +749,18 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/dashboard/:index",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "dashboard", ":index"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"dashboard",
+								":index"
+							],
 							"variable": [
 								{
 									"key": "index",
-									"value": "test3"
+									"value": "test"
 								}
 							]
 						}
@@ -670,8 +789,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/issue?filterbystatus=處理, 已處",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "issue"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"issue"
+							],
 							"query": [
 								{
 									"key": "pagesize",
@@ -728,8 +852,13 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/issue",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "issue"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"issue"
+							]
 						}
 					},
 					"response": []
@@ -760,8 +889,14 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/issue/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "issue", ":id"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"issue",
+								":id"
+							],
 							"variable": [
 								{
 									"key": "id",
@@ -821,8 +956,14 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/auth/login",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "auth", "login"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"auth",
+								"login"
+							]
 						}
 					},
 					"response": []
@@ -849,8 +990,14 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/user/me",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "user", "me"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"user",
+								"me"
+							]
 						}
 					},
 					"response": []
@@ -881,8 +1028,14 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/user/me",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "user", "me"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"user",
+								"me"
+							]
 						}
 					},
 					"response": []
@@ -916,8 +1069,13 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/user?pagesize=10&page=1&searchbyname=&searchbyid=1&sort=id&order=asc",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "user"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"user"
+							],
 							"query": [
 								{
 									"key": "pagesize",
@@ -974,8 +1132,14 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/user/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "user", ":id"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"user",
+								":id"
+							],
 							"variable": [
 								{
 									"key": "id",
@@ -993,7 +1157,9 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/user/:userid/viewpoint",
-							"host": ["{{url}}"],
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"user",
@@ -1017,7 +1183,9 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/user/:userid/viewpoint",
-							"host": ["{{url}}"],
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"user",
@@ -1041,7 +1209,9 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/user/:userid/viewpoint/:viewpointid",
-							"host": ["{{url}}"],
+							"host": [
+								"{{url}}"
+							],
 							"path": [
 								"{{version}}",
 								"user",
@@ -1085,8 +1255,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/contributor",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "contributor"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"contributor"
+							]
 						}
 					},
 					"response": []
@@ -1107,8 +1282,13 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{version}}/contributor",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "contributor"]
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"contributor"
+							]
 						}
 					},
 					"response": []
@@ -1120,8 +1300,14 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/contributor/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "contributor", ":id"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"contributor",
+								":id"
+							],
 							"variable": [
 								{
 									"key": "id",
@@ -1139,8 +1325,14 @@
 						"header": [],
 						"url": {
 							"raw": "{{url}}/{{version}}/contributor/:id",
-							"host": ["{{url}}"],
-							"path": ["{{version}}", "contributor", ":id"],
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{version}}",
+								"contributor",
+								":id"
+							],
 							"variable": [
 								{
 									"key": "id",

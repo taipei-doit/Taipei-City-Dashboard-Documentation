@@ -4,12 +4,12 @@
 
 `GET` `/component`
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 | Item         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Permissions  | `Guest`                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Query Params | `pagesize` ------------- Number of components per page.<br>`pagenum` --------------- Page number. Requires `pagesize`.<br>`searchbyname` ------ Text string to search name by.<br>`searchbyindex` ---- Text string to search index by. <br>`filterby` ------------- Column to filter by. <br>`filtermode` --------- "eq", "ne", "gt", "lt", "in".<br>`sort` -------------------- Column to sort by.<br>`order` ------------------ "asc", "desc". |
+| Query Params | `pagesize` ------------- Number of components per page.<br>`pagenum` --------------- Page number. Requires `pagesize`.<br>`searchbyname` ------ Text string to search name by.<br>`searchbyindex` ---- Text string to search index by. <br>`filterby` ------------- Column to filter by. <br>`filtermode` --------- "eq", "ne", "gt", "lt", "in".<br>`sort` -------------------- Column to sort by.<br>`order` ------------------ "asc", "desc".<br>`city` -------------------- "taipei", "metrotaipei".|
 
 **Response:**
 
@@ -30,7 +30,7 @@ _[Try out the API in our API Tester](/api)_
 
 `GET` `/component/:id`
 
-_[Try out the API in our API Tester](/api)_
+<!-- _[Try out the API in our API Tester](/api)_ -->
 
 | Item        | Description |
 | ----------- | ----------- |

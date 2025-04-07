@@ -28,6 +28,11 @@ Airflow 不僅僅是一個排程工具，而是一個完整的平台。平台總
 │   │   │   ├── job_config.json             // DAG 設定檔
 │   │   │   └── D030101_1.py                // DAG 程式碼
 │   │   ├──  ...                            // 其餘 DAG
+│   ├── proj_new_taipei_city_dashboard      // 新北市儀表板現存之開放資料資料流
+│   │   ├── dependency_ratio_and_aging_index// 單一 DAG
+│   │   │   ├── job_config.json             // DAG 設定檔
+│   │   │   └── dependency_ratio_and_aging_index.py  // DAG 程式碼
+│   │   ├──  ...                            // 其餘 DAG
 │   │ 
 │   ├── settings
 │   │   └── global_config.py                // 全域設定

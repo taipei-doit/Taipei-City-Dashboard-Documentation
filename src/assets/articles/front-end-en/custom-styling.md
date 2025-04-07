@@ -23,7 +23,7 @@ This project heavily uses style variables to ensure uniformity of colors, fonts,
 	--color-normal-text: white;
 	--color-complement-text: #888787; /* color for less important texts */
 	--color-component-background: #282a2c; /* background color for most UI elements */
-	--color-overlay: rgba(0, 0, 0, 0.65); /* overlay for dialogs */
+	--color-overlay: rgba(0, 0, 0, 0.66); /* overlay for dialogs */
 	--font-to-icon: 1.2;
 	--font-xl: 1.5rem;
 	--font-l: 1.25rem;
@@ -31,6 +31,7 @@ This project heavily uses style variables to ensure uniformity of colors, fonts,
 	--font-ms: 1rem;
 	--font-s: 0.75rem;
 	--font-icon: "Material Icons Round";
+    --vh: 1vh;
 }
 ```
 
