@@ -1,6 +1,6 @@
 ## Running the Project Locally
 
-**_looks_one_** Fork [the project repository](https://github.com/tpipei-doit/Taipei-City-Dashboard) then clone the project to your computer. Open the repository with VSCode or your preferred code editor.
+**_looks_one_** Fork [the project repository](https://github.com/taipei-doit/Taipei-City-Dashboard) then clone the project to your computer. Open the repository with VSCode or your preferred code editor.
 
 **_looks_two_** Start the Docker engine via opening Docker Desktop or the command line. Then, open the repository terminal and change the directory to `/docker` (`cd docker`).
 

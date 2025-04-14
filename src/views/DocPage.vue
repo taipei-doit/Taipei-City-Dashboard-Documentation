@@ -29,7 +29,7 @@ const nextPageIndex = computed(() => {
 	return currentPageIndex.value + 1;
 });
 const githubEditLink = computed(() => {
-	return `https://github.com/tpipei-doit/Taipei-City-Dashboard-Documentation/edit/main/src/assets/articles/${route.name}-${appStore.lang}/${props.id}.md`;
+	return `https://github.com/taipei-doit/Taipei-City-Dashboard-Documentation/edit/main/src/assets/articles/${route.name}-${appStore.lang}/${props.id}.md`;
 });
 const associatedVideos = computed(() => {
 	if (route.name === 'data-end') return [];

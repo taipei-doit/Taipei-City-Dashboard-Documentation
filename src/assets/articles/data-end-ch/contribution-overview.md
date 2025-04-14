@@ -8,7 +8,7 @@
 
 ## 成為協作者
 
-本專案歡迎任何貢獻。我們透過 issues 和 pull requests 在 [GitHub](https://github.com/tpipei-doit/Taipei-City-Dashboard-Data-End) 上管理所有貢獻。
+本專案歡迎任何貢獻。我們透過 issues 和 pull requests 在 [GitHub](https://github.com/taipei-doit/Taipei-City-Dashboard-Data-End) 上管理所有貢獻。
 
 貢獻分為以下三種類型：錯誤回報(bug report)和新功能請求(feature request)。這些貢獻類型將在[稍後的文章](/data-end/open-an-issue)中詳細解釋。
 
@@ -23,7 +23,7 @@
 
 ### 行為守則
 
-在協作本專案時，所有互動必須遵循 [行為守則](https://github.com/tpipei-doit/Taipei-City-Dashboard/blob/main/.github/CODE_OF_CONDUCT.md) 中的規定。
+在協作本專案時，所有互動必須遵循 [行為守則](https://github.com/taipei-doit/Taipei-City-Dashboard/blob/main/.github/CODE_OF_CONDUCT.md) 中的規定。
 
 ### 貢獻流程
 

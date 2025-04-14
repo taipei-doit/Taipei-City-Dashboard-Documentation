@@ -14,7 +14,7 @@
 
 ## 授權和版權
 
-本專案的程式碼是以[AGPL-3 許可證](https://github.com/tpipei-doit/Taipei-City-Dashboard/blob/main/LICENSE)下發行，允許任何形式的修改和商業化。但是，如果你使用我們的程式庫，請務必歸屬我們，且你對程式庫進行任何改動後，也必須將你修改的版本公開釋出，供本產品的其他使用者參考。
+本專案的程式碼是以[AGPL-3 許可證](https://github.com/taipei-doit/Taipei-City-Dashboard/blob/main/LICENSE)下發行，允許任何形式的修改和商業化。但是，如果你使用我們的程式庫，請務必歸屬我們，且你對程式庫進行任何改動後，也必須將你修改的版本公開釋出，供本產品的其他使用者參考。
 
 ## 專案貢獻者
 
