@@ -1,6 +1,6 @@
 ## Overview
 
-Any new development on this project starts with an issue. To open an issue, navigate to the issues tab on [GitHub](https://github.com/tpipei-doit/Taipei-City-Dashboard/issues/new/choose) and choose one of the three issue types. For an issue to be considered, the issue template for that type of request must be filled out in full. Issues that do not provide clear guidance or descriptions may be immediately closed as not actionable.
+Any new development on this project starts with an issue. To open an issue, navigate to the issues tab on [GitHub](https://github.com/taipei-doit/Taipei-City-Dashboard/issues/new/choose) and choose one of the three issue types. For an issue to be considered, the issue template for that type of request must be filled out in full. Issues that do not provide clear guidance or descriptions may be immediately closed as not actionable.
 
 We recommend waiting for your issue to be approved before starting development. This is because all pull requests need to resolve at least one approved issue to be considered. The approval criteria for each issue type are explained below.
 

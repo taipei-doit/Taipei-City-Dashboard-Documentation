@@ -16,7 +16,7 @@ If you come across any issues or typos in this documentation, feel free to click
 
 ## License and Copyright
 
-The codebase for this project is released under the [AGPL-3 License](https://github.com/tpipei-doit/Taipei-City-Dashboard/blob/main/LICENSE), which permits any type of modification and commercialization. However, if you use our codebase in any way, you must provide attribution. In addition, all modifications should be made available for other users of this product.
+The codebase for this project is released under the [AGPL-3 License](https://github.com/taipei-doit/Taipei-City-Dashboard/blob/main/LICENSE), which permits any type of modification and commercialization. However, if you use our codebase in any way, you must provide attribution. In addition, all modifications should be made available for other users of this product.
 
 ## Contributors
 

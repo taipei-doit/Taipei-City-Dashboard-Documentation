@@ -1,6 +1,6 @@
 ## 在本地運行專案
 
-**_looks_one_** Fork [專案程式庫](https://github.com/tpipei-doit/Taipei-City-Dashboard)，然後將專案 clone 到您的電腦。用 VSCode 或您偏好的程式編輯器開啟程式庫。
+**_looks_one_** Fork [專案程式庫](https://github.com/taipei-doit/Taipei-City-Dashboard)，然後將專案 clone 到您的電腦。用 VSCode 或您偏好的程式編輯器開啟程式庫。
 
 **_looks_two_** 透過開啟 Docker Desktop 或使用終端啟動 Docker 引擎。然後，開啟程式庫終端並移動至 `/docker` 資料夾 (`cd docker`)。
 

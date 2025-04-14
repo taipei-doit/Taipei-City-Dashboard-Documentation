@@ -1,6 +1,6 @@
 # <img src='public/images/contributors/doit.png' height='28'> Taipei City Dashboard Documentation
 
-[Docs Website](https://tuic.gov.taipei/documentation) | [Taipei City Dashboard GitHub](https://github.com/tpipei-doit/Taipei-City-Dashboard)
+[Docs Website](https://tuic.gov.taipei/documentation) | [Taipei City Dashboard GitHub](https://github.com/taipei-doit/Taipei-City-Dashboard)
 
 ## Contribute to the Docs
 
@@ -12,6 +12,6 @@ All contributions must include both English and Traditional Chinese versions. If
 
 A big thanks to all contributors to this project!
 
-<a href="https://github.com/tpipei-doit/Taipei-City-Dashboard-Documentation/graphs/contributors">
+<a href="https://github.com/taipei-doit/Taipei-City-Dashboard-Documentation/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tpe-doit/Taipei-City-Dashboard-Documentation" />
 </a>

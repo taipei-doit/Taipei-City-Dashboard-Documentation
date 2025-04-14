@@ -6,7 +6,7 @@ By contributing to this project, you’ll have a say in how Taipei City Dashboar
 
 ## Become a Contributor
 
-This project welcomes any contributions. We manage all of our contributions on [GitHub](https://github.com/tpipei-doit/Taipei-City-Dashboard) through issues and pull requests.
+This project welcomes any contributions. We manage all of our contributions on [GitHub](https://github.com/taipei-doit/Taipei-City-Dashboard) through issues and pull requests.
 
 Contributions are classified into the following two types: bug reports and feature requests. These contribution types will be explained in greater detail in this [later article](/front-end/open-an-issue).
 
@@ -21,7 +21,7 @@ To contribute to this project, certain basic guidelines must be followed. Failur
 
 ### Code of Conduct
 
-When contributing to this project, all interactions must follow the guidelines laid out in the [code of conduct](https://github.com/tpipei-doit/Taipei-City-Dashboard/blob/main/.github/CODE_OF_CONDUCT.md).
+When contributing to this project, all interactions must follow the guidelines laid out in the [code of conduct](https://github.com/taipei-doit/Taipei-City-Dashboard/blob/main/.github/CODE_OF_CONDUCT.md).
 
 ### Contribution Process
 
