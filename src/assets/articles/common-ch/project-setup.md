@@ -49,7 +49,7 @@ PGADMIN_DEFAULT_PASSWORD= # pgadmin 帳戶密碼。
 > **i02**
 > 此變數會在地圖上添加一個 3D 建物圖層。此步驟為可選，可以將變數留空。
 >
-> 首先，[在此處](https://drive.google.com/file/d/1cMBrq1gmSNAioogFZNqA5IyAmhXoeLVs/view?usp=drive_link)下載模型檔案(`geojson`)。然後，打開 Mapbox Studio 並移動到["Tilesets"](https://studio.mapbox.com/tilesets/)。點擊"New Tileset"並上傳下載的文件。上傳完成後，打開 tileset 並點擊"share & use"。複製"Tileset ID"並將其添加到`.env`文件中的變數`VITE_MAPBOXTILE`（貼在"mapbox://"後面）。
+> 首先，[在此處](https://1drv.ms/u/c/0d57c13a41c62975/Ediuy_ijtO5InxtXHs5SNo0B68bioV7CkqQQRRyuLivSXA?e=mdgoda)下載模型檔案(`geojson`)。然後，打開 Mapbox Studio 並移動到["Tilesets"](https://studio.mapbox.com/tilesets/)。點擊"New Tileset"並上傳下載的文件。上傳完成後，打開 tileset 並點擊"share & use"。複製"Tileset ID"並將其添加到`.env`文件中的變數`VITE_MAPBOXTILE`（貼在"mapbox://"後面）。
 >
 > 返回 MapBox 上的 tileset。在螢幕的左側，您會看到一個名為"Vector Layers"的側欄。複製標題下方的圖層名稱（應以"tp_building_height"開頭）。然後，返回到程式庫並移動到`/src/assets/configs/mapbox/mapConfig.js`。找到一個名為"TaipeiBuilding"的物件，並將"source-layer"參數替換為您複製的圖層名稱。
 

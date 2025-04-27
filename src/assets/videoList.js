@@ -3,12 +3,12 @@ export const videoList = {
 		{
 			titleEn: "Tutorial Overview",
 			titleCh: "課程概要和注意事項",
-			url: "https://www.youtube.com/watch?v=gx8NLjTjl8w",
+			url: "https://youtu.be/5NRBaFcoNmw",
 		},
 		{
 			titleEn: "Introduction",
 			titleCh: "儀表板簡介",
-			url: "https://www.youtube.com/watch?v=tDVq0qPxgLE",
+			url: "https://youtu.be/oyClxkLrB7I",
 		},
 	],
 	prerequisites: [
@@ -39,12 +39,12 @@ export const videoList = {
 		{
 			titleEn: "Introduction to Components",
 			titleCh: "組件概述",
-			url: "https://www.youtube.com/watch?v=DpYPQY_6adc",
+			url: "https://youtu.be/R77IyhDP_HE",
 		},
 		{
 			titleEn: "Component Config",
 			titleCh: "組件設定",
-			url: "https://www.youtube.com/watch?v=u0lUkc-NJ4E",
+			url: "https://youtu.be/8rOlv_LFoGM",
 		},
 	],
 	"chart-data": [
@@ -58,7 +58,7 @@ export const videoList = {
 		{
 			titleEn: "Chart Config",
 			titleCh: "組件圖表設定",
-			url: "https://www.youtube.com/watch?v=MuCqlgBipzo",
+			url: "https://youtu.be/m_veuedK7h0",
 		},
 	],
 	"map-data": [
@@ -72,7 +72,7 @@ export const videoList = {
 		{
 			titleEn: "Map Config",
 			titleCh: "組件地圖設定",
-			url: "https://www.youtube.com/watch?v=08ynRI3dPvk",
+			url: "https://youtu.be/wnWVfjs1bEU",
 		},
 	],
 	"map-filtering": [
@@ -91,14 +91,14 @@ export const videoList = {
 	],
 	"customization-overview": [
 		{
-			titleEn: "Create a New Component (1)",
-			titleCh: "建立一個新組件上",
-			url: "https://www.youtube.com/watch?v=vFZt4TIRZqk",
+			titleEn: "Create a New Component",
+			titleCh: "建立一個新組件",
+			url: "https://youtu.be/1jTCJZDwBPs",
 		},
 		{
-			titleEn: "Create a New Component (2)",
-			titleCh: "建立一個新組件下",
-			url: "https://www.youtube.com/watch?v=xXvGnUIIuUc",
+			titleEn: "Create a New Component-TextUnitChart",
+			titleCh: "建立文字單位圖",
+			url: "https://youtu.be/hRoRASJOnPo",
 		},
 		{
 			titleEn: "FE Customization",
@@ -108,14 +108,14 @@ export const videoList = {
 	],
 	"contribution-overview": [
 		{
-			titleEn: "Create a New Component (1)",
+			titleEn: "Create a New Component",
 			titleCh: "建立一個新組件上",
-			url: "https://www.youtube.com/watch?v=vFZt4TIRZqk",
+			url: "https://youtu.be/1jTCJZDwBPs",
 		},
 		{
-			titleEn: "Create a New Component (2)",
-			titleCh: "建立一個新組件下",
-			url: "https://www.youtube.com/watch?v=xXvGnUIIuUc",
+			titleEn: "Create a New Component-TextUnitChart",
+			titleCh: "建立文字單位圖",
+			url: "https://youtu.be/hRoRASJOnPo",
 		},
 		{
 			titleEn: "BE Customization",
@@ -146,17 +146,17 @@ export const videoList = {
 		{
 			titleEn: "Introduction to Components",
 			titleCh: "組件概述",
-			url: "https://www.youtube.com/watch?v=DpYPQY_6adc",
+			url: "https://youtu.be/R77IyhDP_HE",
 		},
 		{
 			titleEn: "Chart Config",
 			titleCh: "組件圖表設定",
-			url: "https://www.youtube.com/watch?v=u0lUkc-NJ4E",
+			url: "https://youtu.be/m_veuedK7h0",
 		},
 		{
 			titleEn: "Map Config",
 			titleCh: "組件地圖設定",
-			url: "https://www.youtube.com/watch?v=08ynRI3dPvk",
+			url: "https://youtu.be/wnWVfjs1bEU",
 		},
 		{
 			titleEn: "Map Filter Config",
