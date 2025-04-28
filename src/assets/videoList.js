@@ -70,6 +70,10 @@ export const videoList = {
 			titleEn: "Chart and History Data",
 			titleCh: "圖表與歷史資料格式",
 			url: "https://www.youtube.com/watch?v=1OARa32Ay3o",
+		},{
+			titleEn: "New version of chart TextUnitChart3.0",
+			titleCh: "新增圖表樣式 文字單位圖 3.0",
+			url: "https://www.youtube.com/watch?v=hRoRASJOnPo",
 		},
 	],
 	"supported-chart-types": [
