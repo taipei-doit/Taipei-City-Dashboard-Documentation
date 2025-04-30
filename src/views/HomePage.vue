@@ -34,7 +34,7 @@ onMounted(() => {
 						<h2>{{ t('dashboard-tagline') }}</h2>
 					</div>
 					<div>
-						<a :href="appStore.lang === 'en' ? 'https://www.youtube.com/watch?v=kJsIsQ_3uLc' : 'https://www.youtube.com/watch?v=07FODlTV74g'"
+						<a :href="appStore.lang === 'en' ? 'https://www.youtube.com/watch?v=yTYEzTmoaoI : 'https://www.youtube.com/watch?v=8MFc01e1P28'"
 							target="_blank" rel="noreferrer"><button class="gray">{{ t('about-us')
 								}}<span>play_circle</span></button></a><a
 							href="https://github.com/taipei-doit/Taipei-City-Dashboard" target="_blank"
