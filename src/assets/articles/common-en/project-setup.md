@@ -49,7 +49,7 @@ PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
 > **i02**
 > This variable adds a 3D building layer to the base map. This step is optional and you may leave the variable blank if you choose.
 >
-> First, download the model file (`geojson`) [here](https://drive.google.com/file/d/1cMBrq1gmSNAioogFZNqA5IyAmhXoeLVs/view?usp=drive_link). Then, open Mapbox Studio and navigate to ["Tilesets"](https://studio.mapbox.com/tilesets/). Click on "New Tileset" and upload the downloaded file. After the upload has been completed, open the tileset and click on "share & use". Copy the "Tileset ID" and append it to the variable `VITE_MAPBOXTILE` in the `.env` file (paste it after "mapbox://").
+> First, download the model file (`geojson`) [here](https://1drv.ms/u/c/0d57c13a41c62975/Ediuy_ijtO5InxtXHs5SNo0B68bioV7CkqQQRRyuLivSXA?e=mdgoda). Then, open Mapbox Studio and navigate to ["Tilesets"](https://studio.mapbox.com/tilesets/). Click on "New Tileset" and upload the downloaded file. After the upload has been completed, open the tileset and click on "share & use". Copy the "Tileset ID" and append it to the variable `VITE_MAPBOXTILE` in the `.env` file (paste it after "mapbox://").
 >
 > Navigate back to the tileset on MapBox. On the left of the screen, you will see a sidebar titled "Vector Layers". Copy the name of the polygon layer (it should start with "tp_building_height") below the title. Then, return to project repository and navigate to `/src/assets/configs/mapbox/mapConfig.js`. Find a object called "TaipeiBuilding" and replace the parameter "source-layer" with the polygon layer name you copied.
 
@@ -57,13 +57,13 @@ PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
 > This variable is newly added in version 3.0, used to control the automatic update frequency of personal dashboards. You can leave this variable empty and configure your personal dashboard update frequency later as needed.
 >
 > Parameter format definition: personal dashboard index:update frequency(seconds),personal dashboard index:update frequency(seconds), using commas to separate multiple dashboard settings.
-> 
+>
 > Configuration example:
->  
+>
 > `VITE_PERSONAL_BOARD_UPDATE`=71528009ae4b:600,415dc056e6df:600,278b42f7d039:600,f7a3542955f1:600
 >
 > The above example shows four different dashboards (identified by index), each set to automatically refresh once every 600 seconds (10 minutes).
-> 
+>
 
 **_looks_4_** In the terminal, execute the following commands one by one to create a docker network and start the containers.
 
