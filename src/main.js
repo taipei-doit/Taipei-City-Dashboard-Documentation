@@ -17,7 +17,7 @@ app.use(router);
 const pinia = createPinia();
 app.use(pinia);
 const i18n = createI18n({
-	locale: "en",
+	locale: "ch",
 	allowComposition: true,
 	messages: {
 		en: en,
