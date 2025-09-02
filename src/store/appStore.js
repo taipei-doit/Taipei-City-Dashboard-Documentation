@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const useAppStore = defineStore("app", {
 	state: () => ({
 		mode: localStorage.getItem("mode") || "light",
-		lang: localStorage.getItem("lang") || "en",
+		lang: localStorage.getItem("lang") || "ch",
 		docs: null,
 		sidebar: false,
 		isMobileDevice: false,
