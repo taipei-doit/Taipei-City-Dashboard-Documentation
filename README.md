@@ -1,6 +1,6 @@
 # <img src='public/images/contributors/doit.png' height='28'> Taipei City Dashboard Documentation
 
-[Docs Website](https://tuic.gov.taipei/documentation) | [Taipei City Dashboard GitHub](https://github.com/taipei-doit/Taipei-City-Dashboard)
+[Docs Website](https://citydashboard.taipei/documentation/) | [Taipei City Dashboard GitHub](https://github.com/taipei-doit/Taipei-City-Dashboard)
 
 ## Contribute to the Docs
 
