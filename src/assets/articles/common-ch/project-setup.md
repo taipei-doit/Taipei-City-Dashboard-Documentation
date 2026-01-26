@@ -37,6 +37,11 @@ DB_MANAGER_PASSWORD= # dashboardmanager 資料庫密碼。
 # Redis Configs
 ...
 
+# Qdrant Configs
+QDRANT_URL=http://qdrant:6333
+QDRANT_API_KEY= # Qdrant API Key.
+QDRANT_COLLECTION_NAME=query_charts
+
 # pgadmin
 PGADMIN_DEFAULT_EMAIL= # 建立一個預設的 pgadmin 帳戶。填入任何電子郵件。
 PGADMIN_DEFAULT_PASSWORD= # pgadmin 帳戶密碼。
@@ -77,7 +82,7 @@ PGADMIN_DEFAULT_PASSWORD= # pgadmin 帳戶密碼。
 docker network create --driver=bridge --subnet=192.168.128.0/24 --gateway=192.168.128.1  br_dashboard
 ```
 
-啟動與 DB 相關的容器。執行此指令後，檢查所有容器是否正在運行。在執行下一個指令之前，請等待資料庫完全初始化（檢查 docker logs 並檢查輸出中是否有 `database system is ready to accept connections`）。
+啟動與 DB 及 Qdrant 相關的容器。執行此指令後，檢查所有容器是否正在運行。在執行下一個指令之前，請等待資料庫完全初始化（檢查 docker logs 並檢查輸出中是否有 `database system is ready to accept connections`）。注意：本地環境必須啟用 Qdrant 容器才能正常使用 Chatbot 功能。
 
 ```bash
 docker-compose -f docker-compose-db.yaml up -d
@@ -128,3 +133,18 @@ docker-compose up -d
 ### Postman
 
 為了測試本專案的 API，我們建議使用 Postman。API 的 collection 可以在<a href="/documentation/data/dashboard_postman.json" download>這裡</a>下載。下載檔案後，打開 Postman 並點擊 "Import" > "Choose Files"，然後選擇下載的檔案。Collection 將會被添加到您的 Postman 工作區。同時也請匯入<a href="/documentation/data/dashboard_postman_env.json" download>這個</a>環境設定檔 ，並在 Postman 介面的右上角選擇環境。
+
+### Qdrant 向量資料庫與資料匯入
+
+此步驟用於將 PostgreSQL 資料庫中的資料轉換為向量嵌入，並上傳至 Qdrant 向量資料庫以供搜尋使用。
+
+**_looks_one_** 確保 Qdrant 服務已啟動。在您執行 `docker-compose -f docker-compose-db.yaml up -d` 時，Qdrant 服務 (`qdrant`) 應已一同啟動。
+
+**_looks_two_** 執行資料匯入工具。此工具會將 PostgreSQL 中的資料轉換為向量並寫入 Qdrant。在 `docker` 目錄下執行：
+
+```bash
+docker compose --profile tools up vector-db-upgrade
+```
+
+> **i06**
+> 首次執行時會自動下載 AI 模型 (約 500MB)，請耐心等待。若需查看詳細執行紀錄，可移除 `-d` 參數。若遇到記憶體不足錯誤，請參考 `docker/qdrant-upgrade/README.md` 進行調整。
