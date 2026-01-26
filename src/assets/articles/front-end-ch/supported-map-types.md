@@ -40,11 +40,11 @@
 > 在 Mapbox 中，每個地圖類型均支援數個 Paint 屬性，用於控制地圖視覺呈現，如顏色、大小、模糊度等。如要微調地圖的預設形式，只需傳遞任何 Mapbox 支援的 Paint 屬性即可。 ([Mapbox 圖層文件](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/))
 
 > **w01**
-> 各地圖類型的顏色預設皆為黑色，因此所有地圖類型的顏色 Paint 屬性(e.g `fill-color`, `circle-color`, etc.)都應該被指定。
+> 除了指定擴充地圖類型外，各地圖類型的顏色預設皆為黑色，因此地圖類型的顏色 Paint 屬性(e.g `fill-color`, `circle-color`, etc.)都應該被指定。
 
 ## 地圖類型
 
-本專案支援 8 種地圖類型。每個地圖類型都有預設的樣式，相關設定位於 `/src/assets/configs/mapbox` 的 `mapConfig.js` 檔案中。有些地圖亦支援一些預設變形。這可以透過在地圖配置中指定大小(size)或圖示(icon)參數來實現。
+本專案支援 9 種地圖類型。每個地圖類型都有預設的樣式，相關設定位於 `/src/assets/configs/mapbox` 的 `mapConfig.js` 檔案中。有些地圖亦支援一些預設變形。這可以透過在地圖配置中指定大小(size)或圖示(icon)參數來實現。
 
 ### Circle
 
@@ -65,6 +65,12 @@ Line 地圖類型在地圖上渲染線條(Line)。`size`變化包括 `wide`。`i
 ### Symbol
 
 Symbol 地圖類型在地圖上將點(Point)渲染為圖示。如使用 symbol 地圖，必須將`icon`參數傳遞給地圖配置。目前可用的圖示包括 `metro`、`metro-density`、`triangle_green`、`triangle_white`、`youbike`、`bus` 和 `cctv`。
+
+### Symbol-3d
+
+Symbol-3d 地圖類型在地圖上將點(Point)渲染為三維模型，現階段僅供三維捷運動態地圖使用。技術核心為透過 mapbox 結合 three.js ，依 geoserver 所發布之即時位置進行動態渲染。Symbol-3d 地圖並不是 Mapbox 的內建地圖類型，故無法以 paint 屬性變換 3D 模型造型，但仍可以 icon 設定不同 3D 模型，或以 size 改變整體 3D 模型大小。
+
+<!-- > **i01** 【 補充說明 - 三維捷運動態地圖 】為擁擠度組件之附屬地圖。地圖資料來源為 Geoserver 提供之即時列車資料，主要資料項目包含列車編號、行駛方向、起站(目前車輛已抵達站點)、迄站及車廂擁擠度資訊。 Geoserver 每1分鐘更新一次列車行駛資料，捷運列車之動態渲染為每1分半更新一次畫面，當畫面更新時會同時參考 Geoserver 最新的列車行駛資料，決定畫面更新時各捷運列車該運行到哪個站點。 -->
 
 ### Arc
 
