@@ -38,4 +38,4 @@ _contributors_
 
 ## 聯絡我們
 
-tuic@gov.taipei（DOIT 官方電子郵件）
+[tuic@gov.taipei](mailto:tuic@gov.taipei)（臺北市資訊局官方電子郵件）

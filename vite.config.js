@@ -24,6 +24,11 @@ export default defineConfig({
 	base: "/documentation",
 	assetsInclude: ["**/*.md"],
 	server: {
+		hmr: {
+			protocol: 'ws',
+			host: '0.0.0.0',
+			clientPort: 8082,
+		},
 		proxy: {
 			"/api/v1": {
 				target: "http://localhost:8088",
