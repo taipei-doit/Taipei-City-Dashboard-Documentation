@@ -73,6 +73,9 @@ const parsedDoctext = computed(() => {
 			return `<img src="${href.includes('http') ? '' : BASE_URL}${href}" alt="${text}" >`;
 		},
 		link(href, title, text) {
+			if (href.startsWith('mailto:')) {
+				return `<a href="${href}">${text}</a>`;
+			}
 			if (href.includes('http')) {
 				return `<a href="${href}" target='_blank'>${text}</a>`;
 			}
