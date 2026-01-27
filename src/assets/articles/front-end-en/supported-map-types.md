@@ -44,7 +44,7 @@ In the database, map configs are stored separately in the `component_maps` table
 
 ## Map Types
 
-8 map types are supported in this project. Each map type has preset default styling applied which is listed in the file `mapConfig.js` located at `/src/assets/configs/mapbox`. Several maps also support preset variations to the default styling. This is achieved by specifying the size or icon parameters in the map config.
+9 map types are supported in this project. Each map type has preset default styling applied which is listed in the file `mapConfig.js` located at `/src/assets/configs/mapbox`. Several maps also support preset variations to the default styling. This is achieved by specifying the size or icon parameters in the map config.
 
 ### Circle
 
@@ -65,6 +65,14 @@ The line map type renders lines onto the map. `Size` variations include `wide`. 
 ### Symbol
 
 The symbol map type renders points as icons. For symbol maps, the `icon` parameter must be passed into the map config. Available icons include `metro`, `metro-density`, `triangle_green`, `triangle_white`, `youbike`, `bus`, and `cctv`.
+
+### Symbol-3d
+
+The Symbol-3D map type renders point features as 3D models on the map and is currently intended solely for use in the 3D metro dynamic map.
+
+Its core implementation integrates Mapbox with Three.js to dynamically render models based on real-time location data published by GeoServer.
+
+As Symbol-3D is not a native Mapbox layer type, paint properties cannot be used to alter the appearance of 3D models. Nevertheless, different 3D models may be specified via the `icon` property, and the overall model scale can be adjusted using the `size` property.
 
 ### Arc
 

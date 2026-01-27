@@ -2,9 +2,15 @@
 
 Before diving into the codebase of this project, it is recommended to have a thorough understanding of the user interface.
 
-If a user isn't logged in, only the dashboard view and map view are available, showcasing public dashboards and components.
+If a user is not logged in, only the Dashboard view and Map view are available, displaying public dashboards and components.
+
+If the user wants to quickly understand which components are relevant to their needs, they can use the assistant located in the bottom-right corner of the interface.
 
 ![User Interface Dashboard Page Not Logged In](/images/front-end/user-interface-1.png)
+
+After clicking the assistant button and opening the chat box, users can input the topics they are interested in. The assistant will filter the relevant components accordingly and display the results in a table.
+
+![TCD ChatBox Not Logged In](/images/front-end/user-interface-1-1.png)
 
 > **i01**
 > In frontend frameworks, components can also refer to reusable templates that could be used to build user interfaces. For this project, we feel that the word "component" is the most appropriate name to give to the elements that make up a dashboard.
@@ -14,6 +20,10 @@ If a user isn't logged in, only the dashboard view and map view are available, s
 If a user is logged in, in addition to the dashboard view and map view, the user can also access their own dashboards. A component view and component-info view will also be made available to the user. If the user is an admin, they will also be able to access the admin view by hovering over their username in the navigation bar.
 
 ![User Interface Dashboard Page Logged In](/images/front-end/user-interface-2.png)
+
+Logged-in users can use the assistant in the bottom-right corner not only to inquire about components related to specific topics, but also to click “Create Dashboard.” The assistant will automatically aggregate recommended components into a suggested dashboard and add it to the user’s private dashboards.
+
+![TCD ChatBox Logged In](/images/front-end/user-interface-2-1.png)
 
 ## /dashboard
 
