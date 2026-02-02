@@ -39,7 +39,7 @@ DB_MANAGER_PASSWORD= # Fill in a password of your choice for the manager databas
 
 # Qdrant Configs
 QDRANT_URL=http://qdrant:6333
-QDRANT_API_KEY= # Qdrant API Key.
+QDRANT_API_KEY= # Qdrant password/API Key. This field is required. Please enter your Qdrant access password or API key, otherwise the connection will fail.
 QDRANT_COLLECTION_NAME=query_charts
 
 # pgadmin
