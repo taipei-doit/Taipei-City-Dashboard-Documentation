@@ -39,7 +39,7 @@ DB_MANAGER_PASSWORD= # dashboardmanager 資料庫密碼。
 
 # Qdrant Configs
 QDRANT_URL=http://qdrant:6333
-QDRANT_API_KEY= # Qdrant API Key.
+QDRANT_API_KEY= # Qdrant 密碼（必填）。此處必須填入 Qdrant 的存取密碼，否則無法連線。
 QDRANT_COLLECTION_NAME=query_charts
 
 # pgadmin
