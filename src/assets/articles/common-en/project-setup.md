@@ -37,6 +37,11 @@ DB_MANAGER_PASSWORD= # Fill in a password of your choice for the manager databas
 # Redis Configs
 ...
 
+# Qdrant Configs
+QDRANT_URL=http://qdrant:6333
+QDRANT_API_KEY= # Qdrant API Key.
+QDRANT_COLLECTION_NAME=query_charts
+
 # pgadmin
 PGADMIN_DEFAULT_EMAIL= # Creates a default pgadmin account. Fill in any email.
 PGADMIN_DEFAULT_PASSWORD= # Fill in any password for the pgadmin account.
@@ -76,7 +81,7 @@ Create a Docker network named `br_dashboard` with a specified subnet.
 docker network create --driver=bridge --subnet=192.168.128.0/24 --gateway=192.168.128.1  br_dashboard
 ```
 
-Run DB related containers. After executing this command, check the if all containers are running. Please also wait until the database is fully initialized (check docker logs and see the message, `database system is ready to accept connections`, is present) before running the next command.
+Run DB and Qdrant related containers. After executing this command, check if all containers are running. Please also wait until the database is fully initialized (check docker logs and see the message, `database system is ready to accept connections`, is present) before running the next command. Note: The Qdrant container must be enabled locally to use the Chatbot function.
 
 ```bash
 docker-compose -f docker-compose-db.yaml up -d
@@ -127,3 +132,18 @@ To register the 2 Postgres databases in pgAdmin, follow the steps below:
 ### Postman
 
 To better test the APIs of this product, we recommend using Postman. The collection file for the APIs can be found <a href="/documentation/data/dashboard_postman.json" download>here</a>. After downloading the file, open Postman and click on "Import" > "Choose Files" and select the downloaded file. The collection will then be added to your Postman workspace. Also import the environment file <a href="/documentation/data/dashboard_postman_env.json" download>here</a> and select the environment in the top right corner of Postman.
+
+### Qdrant Vector Database & Data Ingestion
+
+This step is used to convert data from the PostgreSQL database into vector embeddings and upload them to the Qdrant vector database for search functionality.
+
+**_looks_one_** Ensure the Qdrant service is running. When you run `docker-compose -f docker-compose-db.yaml up -d`, the Qdrant service (`qdrant`) should start automatically.
+
+**_looks_two_** Run the data ingestion tool. This tool converts data from PostgreSQL into vectors and writes them to Qdrant. Execute the following in the `docker` directory:
+
+```bash
+docker compose --profile tools up vector-db-upgrade
+```
+
+> **i06**
+> The first run will automatically download the AI model (approx. 500MB), so please be patient. To view detailed execution logs, remove the `-d` parameter. If you encounter out-of-memory errors, please refer to `docker/qdrant-upgrade/README.md` for adjustment instructions.
