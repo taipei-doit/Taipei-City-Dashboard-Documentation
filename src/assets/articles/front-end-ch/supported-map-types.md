@@ -40,11 +40,11 @@
 > 在 Mapbox 中，每個地圖類型均支援數個 Paint 屬性，用於控制地圖視覺呈現，如顏色、大小、模糊度等。如要微調地圖的預設形式，只需傳遞任何 Mapbox 支援的 Paint 屬性即可。 ([Mapbox 圖層文件](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/))
 
 > **w01**
-> 除了指定擴充地圖類型外，各地圖類型的顏色預設皆為黑色，因此地圖類型的顏色 Paint 屬性(e.g `fill-color`, `circle-color`, etc.)都應該被指定。
+> 除了指定非內建地圖類型外，各地圖類型的顏色預設皆為黑色，因此地圖類型的顏色 Paint 屬性(e.g `fill-color`, `circle-color`, etc.)都應該被指定。
 
 ## 地圖類型
 
-本專案支援 9 種地圖類型。每個地圖類型都有預設的樣式，相關設定位於 `/src/assets/configs/mapbox` 的 `mapConfig.js` 檔案中。有些地圖亦支援一些預設變形。這可以透過在地圖配置中指定大小(size)或圖示(icon)參數來實現。
+本專案支援多種地圖類型。每個地圖類型都有預設的樣式，相關設定位於 `/src/assets/configs/mapbox` 的 `mapConfig.js` 檔案中。有些地圖亦支援一些預設變形。這可以透過在地圖配置中指定大小(size)或圖示(icon)參數來實現。
 
 ### Circle
 
