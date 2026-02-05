@@ -40,7 +40,7 @@ In the database, map configs are stored separately in the `component_maps` table
 > In Mapbox, each map type supports numerous paint properties that control visual details such as color, size, blur, etc. To customize a map beyond its default form, simply pass in any paint property supported by Mapbox. ([Mapbox layers docs](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/))
 
 > **w01**
-> As the default color for all map types is black, the color paint property (e.g. `fill-color`, `circle-color`, etc.) for all map types should ALWAYS be specified.
+> Except for custom (non-built-in) map types, the default color for all map types is black, the color paint property (e.g. `fill-color`, `circle-color`, etc.) for all map types should ALWAYS be specified.
 
 ## Map Types
 
