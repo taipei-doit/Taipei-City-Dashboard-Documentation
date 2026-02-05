@@ -4,7 +4,7 @@
 
 **_looks_two_** 透過開啟 Docker Desktop 或使用終端啟動 Docker 引擎。然後，開啟程式庫終端並移動至 `/docker` 資料夾 (`cd docker`)。
 
-**_looks_3_** 在 docker 資料夾中，有一個 `.env.template` 檔案。複製該檔案並將其重新命名為 `.env`。大部分的變數已預填完成，而有些標記為 `[External Dev Don't Need to Fill]`。請不要更改上述變數的值。然而，您需要自行填寫以下 9 個變數：
+**_looks_3_** 在 docker 資料夾中，有一個 `.env.template` 檔案。複製該檔案並將其重新命名為 `.env`。大部分的變數已預填完成，而有些標記為 `[External Dev Don't Need to Fill]`。請不要更改上述變數的值。然而，您需要自行填寫以下相關變數：
 
 ```bash
 ## Docker image tag
@@ -39,7 +39,7 @@ DB_MANAGER_PASSWORD= # dashboardmanager 資料庫密碼。
 
 # Qdrant Configs
 QDRANT_URL=http://qdrant:6333
-QDRANT_API_KEY= # Qdrant 密碼/金鑰（API Key），必須填入 Qdrant 的存取密碼，否則無法連線。
+QDRANT_API_KEY= # Qdrant 密碼（必填）。此處必須填入 Qdrant 的存取密碼，否則無法連線。
 QDRANT_COLLECTION_NAME=query_charts
 
 # pgadmin

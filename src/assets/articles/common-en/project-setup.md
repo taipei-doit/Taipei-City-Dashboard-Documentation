@@ -4,7 +4,7 @@
 
 **_looks_two_** Start the Docker engine via opening Docker Desktop or the command line. Then, open the repository terminal and change the directory to `/docker` (`cd docker`).
 
-**_looks_3_** In the docker directory, there is an `.env.template` file. Copy that file and rename it to `.env`. Most of the variables have already been pre-filled and some are labeled `[External Dev Don't Need to Fill]`. Please do not change the values of those variables. However, you will need to fill in the following 9 variables yourself:
+**_looks_3_** In the docker directory, there is an `.env.template` file. Copy that file and rename it to `.env`. Most of the variables have already been pre-filled and some are labeled `[External Dev Don't Need to Fill]`. Please do not change the values of those variables. However, you will need to fill in the following parameters yourself:
 
 ```bash
 ## Docker image tag
@@ -39,7 +39,7 @@ DB_MANAGER_PASSWORD= # Fill in a password of your choice for the manager databas
 
 # Qdrant Configs
 QDRANT_URL=http://qdrant:6333
-QDRANT_API_KEY= # Qdrant password/API Key. This field is required. Please enter your Qdrant access password or API key, otherwise the connection will fail.
+QDRANT_API_KEY= # Qdrant password (required). You must enter your Qdrant access password here, otherwise the connection will fail.
 QDRANT_COLLECTION_NAME=query_charts
 
 # pgadmin
