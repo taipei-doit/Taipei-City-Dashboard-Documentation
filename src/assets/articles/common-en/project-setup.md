@@ -4,7 +4,7 @@
 
 **_looks_two_** Start the Docker engine via opening Docker Desktop or the command line. Then, open the repository terminal and change the directory to `/docker` (`cd docker`).
 
-**_looks_3_** In the docker directory, there is an `.env.template` file. Copy that file and rename it to `.env`. Most of the variables have already been pre-filled and some are labeled `[External Dev Don't Need to Fill]`. Please do not change the values of those variables. However, you will need to fill in the following 9 variables yourself:
+**_looks_3_** In the docker directory, there is an `.env.template` file. Copy that file and rename it to `.env`. Most of the variables have already been pre-filled and some are labeled `[External Dev Don't Need to Fill]`. Please do not change the values of those variables. However, you will need to fill in the following parameters yourself:
 
 ```bash
 ## Docker image tag
