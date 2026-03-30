@@ -115,6 +115,7 @@ export const ch = {
 		"viewpoint-apis": "地圖視角 API",
 		"chatlog-apis": "對話紀錄 API",
 		"vectordb-apis": "向量資料庫 API",
+		"ai-apis": "AI 對話 API",
 		"#contribution-guide": "協作指南",
 		"contribution-overview": "協作方式概覽",
 		"code-style": "程式撰寫規範",
