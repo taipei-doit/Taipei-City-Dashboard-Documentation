@@ -17,7 +17,7 @@ For auditing and performance tracking, the backend automatically stores the deta
 | Field | Type | Description |
 | --- | --- | --- |
 | `id` | `int64` | Primary key, auto-incremented. |
-| `session_id` | `string` | The session ID of the conversation. |
+| `session` | `string` | The session ID of the conversation. |
 | `user_id` | `string` | The ID of the user who initiated the request. |
 | `provider` | `string` | The AI provider name (default is `twcc`). |
 | `model` | `string` | The name of the model used. |
@@ -71,7 +71,7 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `session_id` | `string` | No | Session ID. Automatically generated if not provided. |
+| `session` | `string` | No | Session ID. Automatically generated if not provided. |
 | `stream` | `boolean` | No | Enable Streaming mode (SSE). Default is `false`. |
 | `messages` | `array` | Yes | List of message history. Each item must have `role` and `content`. |
 | `temperature` | `float` | No | Controls randomness (0.0 - 1.0). |
@@ -88,7 +88,7 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 ```json
 {
-  "session_id": "session_0123456789",
+  "session": "session_1234567890",
   "stream": false,
   "messages": [
     { "role": "system", "content": "You are a guide expert for Taipei City." },
@@ -122,7 +122,7 @@ The parameters are designed based on the [TWCC Official API Specification](https
 {
   "status": "success",
   "data": {
-    "session_id": "test_session",
+    "session": "session_1234567890",
     "content": "Certainly! Here are 3 recommended spots...",
     "usage": {
       "input_tokens": 42,
