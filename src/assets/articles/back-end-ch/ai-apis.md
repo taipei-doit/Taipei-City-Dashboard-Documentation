@@ -17,7 +17,7 @@
 | 欄位名稱 | 類型 | 描述 |
 | --- | --- | --- |
 | `id` | `int64` | 主鍵，自動遞增。 |
-| `session_id` | `string` | 該次對話的階段 ID。 |
+| `session` | `string` | 該次對話的階段 ID。 |
 | `user_id` | `string` | 發起請求的用戶 ID。 |
 | `provider` | `string` | AI 供應商名稱（預設為 `twcc`）。 |
 | `model` | `string` | 使用的模型名稱。 |
@@ -71,7 +71,7 @@
 
 | 參數 | 類型 | 必填 | 描述 |
 | --- | --- | --- | --- |
-| `session_id` | `string` | 否 | 對話階段 ID，若未提供系統將自動生成。 |
+| `session` | `string` | 否 | 對話階段 ID，若未提供系統將自動生成。 |
 | `stream` | `boolean` | 否 | 是否開啟串流模式（SSE）。預設為 `false`。 |
 | `messages` | `array` | 是 | 對話歷史清單。每一項需包含 `role` 與 `content`。 |
 | `temperature` | `float` | 否 | 控制生成結果的隨機性 (0.0 - 1.0)。 |
@@ -88,7 +88,7 @@
 
 ```json
 {
-  "session_id": "session_0123456789",
+  "session": "session_1234567890",
   "stream": false,
   "messages": [
     { "role": "system", "content": "你是一個台北市的導覽專家。" },
@@ -122,7 +122,7 @@
 {
   "status": "success",
   "data": {
-    "session_id": "test_session",
+    "session": "session_1234567890",
     "content": "當然！這裡有三個推薦的景點...",
     "usage": {
       "input_tokens": 42,
