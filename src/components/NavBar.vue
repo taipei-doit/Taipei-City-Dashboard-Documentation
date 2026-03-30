@@ -66,8 +66,6 @@ onMounted(() => {
 
 	&-logo {
 		display: flex;
-		// position: relative;
-		// overflow: visible;
 
 		h1 {
 			font-weight: 500;
