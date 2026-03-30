@@ -88,11 +88,11 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 ```json
 {
-  "session_id": "test_session_12345",
+  "session_id": "session_0123456789",
   "stream": false,
   "messages": [
     { "role": "system", "content": "You are a guide expert for Taipei City." },
-    { "role": "user", "content": "Recommend 3 spots in Taipei and tell me the current weather." }
+    { "role": "user", "content": "Recommend 3 spots in Taipei and tell me the current time." }
   ],
   "temperature": 0.7,
   "top_p": 0.9,
@@ -105,15 +105,8 @@ The parameters are designed based on the [TWCC Official API Specification](https
     {
       "type": "function",
       "function": {
-        "name": "get_current_weather",
-        "description": "Get the current weather in a given location",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "location": { "type": "string", "description": "The city name, e.g. Taipei" }
-          },
-          "required": ["location"]
-        }
+        "name": "get_current_time",
+        "description": "Get the current Taipei time from the server"
       }
     }
   ],
