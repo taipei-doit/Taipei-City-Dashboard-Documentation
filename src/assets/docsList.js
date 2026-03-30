@@ -64,6 +64,7 @@ export const docsList = {
 		"viewpoint-apis",
 		"chatlog-apis",
 		"vectordb-apis",
+		"ai-apis",
 		"#contribution-guide",
 		"contribution-overview",
 		"code-style",
