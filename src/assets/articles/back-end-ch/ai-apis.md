@@ -88,11 +88,11 @@
 
 ```json
 {
-  "session_id": "test_session_12345",
+  "session_id": "session_0123456789",
   "stream": false,
   "messages": [
     { "role": "system", "content": "你是一個台北市的導覽專家。" },
-    { "role": "user", "content": "推薦我三個台北市的景點，並告訴我現在的天氣。" }
+    { "role": "user", "content": "推薦我三個台北市的景點，並告訴我現在的時間。" }
   ],
   "temperature": 0.7,
   "top_p": 0.9,
@@ -105,15 +105,8 @@
     {
       "type": "function",
       "function": {
-        "name": "get_current_weather",
-        "description": "取得特定地點的目前天氣狀況",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "location": { "type": "string", "description": "城市名稱，例如：Taipei" }
-          },
-          "required": ["location"]
-        }
+        "name": "get_current_time",
+        "description": "取得伺服器目前的台北時間"
       }
     }
   ],
