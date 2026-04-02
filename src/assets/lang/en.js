@@ -115,6 +115,7 @@ export const en = {
 		"viewpoint-apis": "Viewpoint APIs",
 		"chatlog-apis": "Chatlog APIs",
 		"vectordb-apis": "Vector DB APIs",
+		"ai-apis": "AI Chat APIs",
 		"#contribution-guide": "Contribution Guide",
 		"contribution-overview": "Contribution Overview",
 		"code-style": "Code Style",
