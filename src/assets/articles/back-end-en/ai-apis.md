@@ -12,7 +12,7 @@ This project integrates Large Language Models (LLM) from TWS (TWCC) and provides
 
 ## Chat Log (ai_chatlog)
 
-For auditing and performance tracking, the backend automatically stores the details of every conversation in the `ai_chatlog` table. 
+For auditing and performance tracking, the api stores the details of every conversation in the `ai_chatlog` table. 
 
 | Field | Type | Description |
 | --- | --- | --- |
@@ -135,20 +135,20 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 ```json
 {
-  "status": "success",
-  "data": {
-    "session": "session_1234567890",
-    "content": "Certainly! Here are 3 recommended spots...",
-    "usage": {
-      "input_tokens": 42,
-      "output_tokens": 256,
-      "total_tokens": 298
+    "data": {
+        "content": "In 2023, the population summary of Taipei City is as follows:\n- Young population (0-14 years old): 310,069 people\n- Working-age population (15-64 years old): 1,648,662 people\n- Elderly population (65 years old and above): 553,155 people\n- Total population: 2,511,886 people\n- Data last updated on February 19, 2025.",
+        "latency_ms": 6348,
+        "model": "llama3.3-ffm-70b-16k-chat",
+        "provider": "twcc",
+        "session": "session_1234567890",
+        "tool_used": true,
+        "usage": {
+            "input_tokens": 1644,
+            "output_tokens": 117,
+            "total_tokens": 1761
+        }
     },
-    "tool_used": false,
-    "latency_ms": 1850,
-    "model": "llama3.3-ffm-70b-16k-chat",
-    "provider": "twcc"
-  }
+    "status": "success"
 }
 ```
 
