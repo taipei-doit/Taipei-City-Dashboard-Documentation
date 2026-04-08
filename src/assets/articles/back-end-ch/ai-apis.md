@@ -12,7 +12,7 @@
 
 ## 對話日誌記錄 (ai_chatlog)
 
-為了進行系統審核與效能追蹤，後端會自動將每一次的對話細節儲存於 `ai_chatlog` 資料表中。
+為了進行系統審核與效能追蹤，API會將每一次的對話細節儲存於 `ai_chatlog` 資料表中。
 
 | 欄位名稱 | 類型 | 描述 |
 | --- | --- | --- |
@@ -135,20 +135,20 @@
 
 ```json
 {
-  "status": "success",
-  "data": {
-    "session": "session_1234567890",
-    "content": "當然！這裡有三個推薦的景點...",
-    "usage": {
-      "input_tokens": 42,
-      "output_tokens": 256,
-      "total_tokens": 298
+    "data": {
+        "content": "根據系統資料顯示，台北市在2023年的總人口為2511886人，其中以青壯年（15-64歲）占比最高，約有1648662人；其次為老年人口（65歲以上），有553155人；幼年人口（0-14歲）則有310069人。",
+        "latency_ms": 6822,
+        "model": "llama3.3-ffm-70b-16k-chat",
+        "provider": "twcc",
+        "session": "session_1234567890",
+        "tool_used": true,
+        "usage": {
+            "input_tokens": 1684,
+            "output_tokens": 98,
+            "total_tokens": 1782
+        }
     },
-    "tool_used": false,
-    "latency_ms": 1850,
-    "model": "llama3.3-ffm-70b-16k-chat",
-    "provider": "twcc"
-  }
+    "status": "success"
 }
 ```
 
