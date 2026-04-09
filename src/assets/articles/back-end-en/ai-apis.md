@@ -12,7 +12,7 @@ This project integrates Large Language Models (LLM) from TWS (TWCC) and provides
 
 ## Chat Log (ai_chatlog)
 
-For auditing and performance tracking, the backend automatically stores the details of every conversation in the `ai_chatlog` table. 
+For auditing and performance tracking, the api stores the details of every conversation in the `ai_chatlog` table. 
 
 | Field | Type | Description |
 | --- | --- | --- |
@@ -88,44 +88,66 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 ```json
 {
-  "session": "session_1234567890",
-  "stream": false,
-  "messages": [
-    { "role": "system", "content": "You are a guide expert for the Taipei City Dashboard." },
-    { "role": "user", "content": "Tell me the population summary of Taipei in 2023." }
-  ],
-  "temperature": 0.7,
-  "top_p": 0.9,
-  "top_k": 50,
-  "max_new_tokens": 500,
-  "frequence_penalty": 1.1,
-  "stop_sequences": ["###", "END"],
-  "seed": 42,
-  "tools": [
-    {
-      "type": "function",
-      "function": {
-        "name": "get_population_summary",
-        "description": "Query population age distribution data for a specific year in Taipei or New Taipei City, including young, working-age, and elderly populations.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "city": {
-              "type": "string",
-              "description": "City name",
-              "enum": ["taipei", "new_taipei"]
-            },
-            "year": {
-              "type": "integer",
-              "description": "The year to query, e.g., 2023"
-            }
-          },
-          "required": ["city", "year"]
+    "session": "session_1234567890",
+    "stream": false,
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a guide expert for the Taipei City Dashboard."
+        },
+        {
+            "role": "user",
+            "content": "Please tell me today's date and help me query the population structure of Taipei City at 2023."
         }
-      }
-    }
-  ],
-  "tool_choice": "auto"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 500,
+    "frequence_penalty": 1.1,
+    "stop_sequences": [
+        "###",
+        "END"
+    ],
+    "seed": 42,
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "get_current_time",
+                "description": "Get the current Taipei time from the server"
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_population_summary",
+                "description": "Query population age distribution data for a specific year in Taipei or New Taipei City, including young, working-age, and elderly populations.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "city": {
+                            "type": "string",
+                            "description": "City name",
+                            "enum": [
+                                "taipei",
+                                "new_taipei"
+                            ]
+                        },
+                        "year": {
+                            "type": "integer",
+                            "description": "The year to query, e.g., 2023"
+                        }
+                    },
+                    "required": [
+                        "city",
+                        "year"
+                    ]
+                }
+            }
+        }
+    ],
+    "tool_choice": "auto"
 }
 ```
 
@@ -135,20 +157,20 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 ```json
 {
-  "status": "success",
-  "data": {
-    "session": "session_1234567890",
-    "content": "Certainly! Here are 3 recommended spots...",
-    "usage": {
-      "input_tokens": 42,
-      "output_tokens": 256,
-      "total_tokens": 298
+    "data": {
+        "content": "Today's date is 2026-04-09, and I have found the population structure of Taipei City in 2023 for you. According to the results:\n- Young population (0-14 years old): 310,069 people\n- Working-age population (15-64 years old): 1,648,662 people\n- Elderly population (65 years old and above): 553,155 people\n- Total population: 2,511,886 people\n- The data was last updated on 2025-02-19.",
+        "latency_ms": 7176,
+        "model": "llama3.3-ffm-70b-16k-chat",
+        "provider": "twcc",
+        "session": "session_1234567890",
+        "tool_used": true,
+        "usage": {
+            "input_tokens": 1938,
+            "output_tokens": 152,
+            "total_tokens": 2090
+        }
     },
-    "tool_used": false,
-    "latency_ms": 1850,
-    "model": "llama3.3-ffm-70b-16k-chat",
-    "provider": "twcc"
-  }
+    "status": "success"
 }
 ```
 

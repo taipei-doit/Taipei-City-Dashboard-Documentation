@@ -12,7 +12,7 @@
 
 ## 對話日誌記錄 (ai_chatlog)
 
-為了進行系統審核與效能追蹤，後端會自動將每一次的對話細節儲存於 `ai_chatlog` 資料表中。
+為了進行系統審核與效能追蹤，API會將每一次的對話細節儲存於 `ai_chatlog` 資料表中。
 
 | 欄位名稱 | 類型 | 描述 |
 | --- | --- | --- |
@@ -88,44 +88,66 @@
 
 ```json
 {
-  "session": "session_1234567890",
-  "stream": false,
-  "messages": [
-    { "role": "system", "content": "你是台北市城市儀表板的導覽專家。" },
-    { "role": "user", "content": "幫我查詢台北市 2023 年的人口結構概況" }
-  ],
-  "temperature": 0.7,
-  "top_p": 0.9,
-  "top_k": 50,
-  "max_new_tokens": 500,
-  "frequence_penalty": 1.1,
-  "stop_sequences": ["###", "END"],
-  "seed": 42,
-  "tools": [
-    {
-      "type": "function",
-      "function": {
-        "name": "get_population_summary",
-        "description": "查詢台北市或新北市特定年份的人口年齡分佈數據，包含幼年、青壯年及老年人口數。",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "city": {
-              "type": "string",
-              "description": "城市名稱",
-              "enum": ["taipei", "new_taipei"]
-            },
-            "year": {
-              "type": "integer",
-              "description": "查詢年份，例如 2023"
-            }
-          },
-          "required": ["city", "year"]
+    "session": "session_1234567890",
+    "stream": false,
+    "messages": [
+        {
+            "role": "system",
+            "content": "你是台北市城市儀表板的導覽專家。"
+        },
+        {
+            "role": "user",
+            "content": "請告訴我今天日期，並幫我查詢台北市2023年的人口結構概況"
         }
-      }
-    }
-  ],
-  "tool_choice": "auto"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 500,
+    "frequence_penalty": 1.1,
+    "stop_sequences": [
+        "###",
+        "END"
+    ],
+    "seed": 42,
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "get_current_time",
+                "description": "取得伺服器目前的台北時間"
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_population_summary",
+                "description": "查詢台北市或新北市特定年份的人口年齡分佈數據，包含幼年、青壯年及老年人口數。",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "city": {
+                            "type": "string",
+                            "description": "城市名稱",
+                            "enum": [
+                                "taipei",
+                                "new_taipei"
+                            ]
+                        },
+                        "year": {
+                            "type": "integer",
+                            "description": "查詢年份，例如 2023"
+                        }
+                    },
+                    "required": [
+                        "city",
+                        "year"
+                    ]
+                }
+            }
+        }
+    ],
+    "tool_choice": "auto"
 }
 ```
 
@@ -135,20 +157,20 @@
 
 ```json
 {
-  "status": "success",
-  "data": {
-    "session": "session_1234567890",
-    "content": "當然！這裡有三個推薦的景點...",
-    "usage": {
-      "input_tokens": 42,
-      "output_tokens": 256,
-      "total_tokens": 298
+    "data": {
+        "content": "今天的日期是2026-04-09，且為您查到台北市於2023年的人口結構概況。根據結果顯示：\n- 幼年人口 (0-14歲) 有 310069 人。\n- 青壯年人口 (15-64歲) 有 1648662 人。\n- 老年人口 (65歲以上) 有 553155 人。\n- 總人口為 2511886 人。\n- 數據最後更新時間是在2025-02-19。",
+        "latency_ms": 7176,
+        "model": "llama3.3-ffm-70b-16k-chat",
+        "provider": "twcc",
+        "session": "session_1234567890",
+        "tool_used": true,
+        "usage": {
+            "input_tokens": 1938,
+            "output_tokens": 152,
+            "total_tokens": 2090
+        }
     },
-    "tool_used": false,
-    "latency_ms": 1850,
-    "model": "llama3.3-ffm-70b-16k-chat",
-    "provider": "twcc"
-  }
+    "status": "success"
 }
 ```
 
