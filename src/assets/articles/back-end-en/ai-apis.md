@@ -88,44 +88,66 @@ The parameters are designed based on the [TWCC Official API Specification](https
 
 ```json
 {
-  "session": "session_1234567890",
-  "stream": false,
-  "messages": [
-    { "role": "system", "content": "You are a guide expert for the Taipei City Dashboard." },
-    { "role": "user", "content": "Tell me the population summary of Taipei in 2023." }
-  ],
-  "temperature": 0.7,
-  "top_p": 0.9,
-  "top_k": 50,
-  "max_new_tokens": 500,
-  "frequence_penalty": 1.1,
-  "stop_sequences": ["###", "END"],
-  "seed": 42,
-  "tools": [
-    {
-      "type": "function",
-      "function": {
-        "name": "get_population_summary",
-        "description": "Query population age distribution data for a specific year in Taipei or New Taipei City, including young, working-age, and elderly populations.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "city": {
-              "type": "string",
-              "description": "City name",
-              "enum": ["taipei", "new_taipei"]
-            },
-            "year": {
-              "type": "integer",
-              "description": "The year to query, e.g., 2023"
-            }
-          },
-          "required": ["city", "year"]
+    "session": "session_1234567890",
+    "stream": false,
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a guide expert for the Taipei City Dashboard."
+        },
+        {
+            "role": "user",
+            "content": "Please tell me today's date and help me query the population structure of Taipei City at 2023."
         }
-      }
-    }
-  ],
-  "tool_choice": "auto"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 500,
+    "frequence_penalty": 1.1,
+    "stop_sequences": [
+        "###",
+        "END"
+    ],
+    "seed": 42,
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "get_current_time",
+                "description": "Get the current Taipei time from the server"
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_population_summary",
+                "description": "Query population age distribution data for a specific year in Taipei or New Taipei City, including young, working-age, and elderly populations.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "city": {
+                            "type": "string",
+                            "description": "City name",
+                            "enum": [
+                                "taipei",
+                                "new_taipei"
+                            ]
+                        },
+                        "year": {
+                            "type": "integer",
+                            "description": "The year to query, e.g., 2023"
+                        }
+                    },
+                    "required": [
+                        "city",
+                        "year"
+                    ]
+                }
+            }
+        }
+    ],
+    "tool_choice": "auto"
 }
 ```
 
@@ -136,16 +158,16 @@ The parameters are designed based on the [TWCC Official API Specification](https
 ```json
 {
     "data": {
-        "content": "In 2023, the population summary of Taipei City is as follows:\n- Young population (0-14 years old): 310,069 people\n- Working-age population (15-64 years old): 1,648,662 people\n- Elderly population (65 years old and above): 553,155 people\n- Total population: 2,511,886 people\n- Data last updated on February 19, 2025.",
-        "latency_ms": 6348,
+        "content": "Today's date is 2026-04-09, and I have found the population structure of Taipei City in 2023 for you. According to the results:\n- Young population (0-14 years old): 310,069 people\n- Working-age population (15-64 years old): 1,648,662 people\n- Elderly population (65 years old and above): 553,155 people\n- Total population: 2,511,886 people\n- The data was last updated on 2025-02-19.",
+        "latency_ms": 7176,
         "model": "llama3.3-ffm-70b-16k-chat",
         "provider": "twcc",
         "session": "session_1234567890",
         "tool_used": true,
         "usage": {
-            "input_tokens": 1644,
-            "output_tokens": 117,
-            "total_tokens": 1761
+            "input_tokens": 1938,
+            "output_tokens": 152,
+            "total_tokens": 2090
         }
     },
     "status": "success"
