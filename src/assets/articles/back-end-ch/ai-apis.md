@@ -196,7 +196,7 @@
 ### 1. 請求生命週期與資料流轉
 
 1.  **控制器層 (Controller)**: 接收前端的 `AIChatInput`，驗證權限並初始化 SSE 標頭（若為串流模式）。
-2.  **業務邏輯層 (Service)**: 建立 `aiSession` 狀態機，並呼叫 `injectInstructions()` 自動將 `tools/registry.go` 中註冊的工具描述注入 System Prompt。
+2.  **業務邏輯層 (Service)**: 建立 `aiSession` 狀態機，並呼叫 `injectInstructions()`。
 3.  **適配器層 (Provider)**: 將通用請求轉換為台智雲專用的 `TWCCRequest` 格式。
 4.  **對話迴圈 (The Loop)**: 
     *   模型生成結果。
@@ -241,7 +241,7 @@
         Register("my_tool_name", MyNewTool)
     }
     ```
-系統會自動將該工具納入 LLM 的感知範圍，無需修改前端代碼。
+
 
 
 
