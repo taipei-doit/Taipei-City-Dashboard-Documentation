@@ -196,7 +196,7 @@ This section is designed for backend developers, detailing the internal implemen
 ### 1. Request Lifecycle & Data Flow
 
 1.  **Controller Layer**: Receives `AIChatInput` from the frontend, validates permissions, and initializes SSE headers (if in streaming mode).
-2.  **Service Layer**: Creates an `aiSession` state machine and calls `injectInstructions()` to automatically inject tool descriptions from `tools/registry.go` into the System Prompt.
+2.  **Service Layer**: Creates an `aiSession` state machine and calls `injectInstructions()` .
 3.  **Provider Layer**: Converts the generic request into the TWS-specific `TWCCRequest` format.
 4.  **The Conversation Loop**:
     *   Model generates results.
@@ -241,7 +241,6 @@ Developers can extend AI capabilities in two simple steps:
         Register("my_tool_name", MyNewTool)
     }
     ```
-The system will automatically include the tool in the LLM's scope without requiring frontend changes.
 
 
 
