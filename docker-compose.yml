@@ -8,9 +8,5 @@ services:
     ports:
       - "8082:8082"
     restart: always
-    volumes:
-      - .:/app
-      - /app/node_modules
     environment:
-      - NODE_ENV=development
-    command: npm run dev -- --port 8082 --host 0.0.0.0
+      - NODE_ENV=production
