@@ -26,6 +26,7 @@ Below is a reference of English and Mandarin names for all chart types.
     BarChart: "橫向長條圖",
     BarPercentChart: "長條圖(%)",
     ColumnChart: "縱向長條圖",
+	NegativeColumnChart: "負向長條圖",
     DonutChart: "圓餅圖",
     GuageChart: "量表圖",
     RadarChart: "雷達圖",
@@ -40,7 +41,11 @@ Below is a reference of English and Mandarin names for all chart types.
 	BarChartWithGoal: "長條圖(目標)",
 	IconPercentChart: "圖示比例圖",
 	IndicatorChart: "指標圖",
-     TextUnitChart: "文字單位圖"
+    TextUnitChart: "文字單位圖",
+	SunburstChart: "旭日圖",
+	SankeyChart: "桑基圖",
+	QuartileChart: "四分位圖",
+	BubbleChart: "泡泡圖",
 };
 ```
 
@@ -57,9 +62,13 @@ Bar charts are usually utilized when there is a long list of data that needs to 
 
 Bar percent charts are used to visualize percentage values in a more concise and tight format compared to gauge charts.
 
-### Column Chart ***new***
+### Column Chart
 
 Column charts are used to display item lists and are best suited for presenting fewer than 12 data items. When the number of data items exceeds 12, the chart automatically provides a scrolling function to view more data, and a toolbar appears at the top, allowing users to zoom in and out of items.
+
+### Negative Column Chart
+
+A Negative Column Chart displays both positive and negative values simultaneously. Columns extend upward and downward from a zero baseline, making it easy to compare increases and decreases, gains and losses, or other directional differences across categories. It is ideal for visualizing changes, deviations, or any data with positive and negative values, allowing users to quickly assess each category's performance relative to the baseline.
 
 ### Donut Chart
 
@@ -123,7 +132,7 @@ Metro charts display the density of metro train carriages on a given metro line.
 }
 ```
 
-### District Chart ***new***
+### District Chart
 
 District charts are used to display lists where the keys are Taipei and New Taipei City districts. By default, larger values are rendered with higher opacity.
 
@@ -170,7 +179,7 @@ Indicator charts are used to display whether a value is within a certain range. 
 }
 ```
 
-### Text Unit Chart ***new***
+### Text Unit Chart
 
 The text unit chart is used to clearly display values and their corresponding text descriptions and units. This chart applies three colors set in chart_config sequentially to the display of text descriptions, values, and units. Although the text unit chart uses a 3D data structure, it specifically utilizes the icon field to present unit symbols or other supplementary information, providing more complete context for the data. Usage example as follows:
 
@@ -190,5 +199,86 @@ The text unit chart is used to clearly display values and their corresponding te
             "icon": "%"
 		}
 	]
+}
+```
+
+### Sunburst Chart ***new***
+
+A Sunburst Chart is used to visualize hierarchical data by displaying levels of hierarchy as concentric circles. Each segment represents a node, and its angle or area reflects the data value. It is suitable for analyzing overall composition, proportional distribution across different levels, and exploring hierarchical relationships. This chart requires a specific data format as shown below.
+
+```json
+{
+  "data": [
+    {
+      "source": "Supplier A", // Source node
+      "target": "Product A", // Target node
+      "value": 100 // Flow value
+    },
+    {
+      "source": "Product A",
+      "target": "Batch A",
+      "value": 100
+    },
+    {
+      "source": "Batch A",
+      "target": "School A",
+      "value": 100
+    }
+  ]
+}
+
+```
+
+### Sankey Chart ***new***
+
+A Sankey Chart is used to visualize the flow and value relationships between different nodes. Nodes are connected by flow lines, and the width of each flow line represents the corresponding value. It is suitable for analyzing the movement of resources, energy, funds, people, or data, helping users quickly understand flow relationships and distribution proportions among nodes.
+
+```json
+{
+  "categories": ["Raw Material Supplier", "Catering Provider", "School"], // N-level node categories
+  "data": [
+    {
+      "source": "Raw Material Supplier A", // Source node (Layer 0)
+      "source_layer": 0,
+      "target": "Catering Provider A", // Target node (Layer 1)
+      "target_layer": 1,
+      "value": 100 // Flow value
+    },
+    {
+      "source": "Catering Provider A",
+      "source_layer": 1,
+      "target": "School A", // Target node (Layer 2)
+      "target_layer": 2,
+      "value": 100
+    }
+  ]
+}
+```
+
+### Quartile Chart ***new***
+
+A Quartile Chart is used to visualize data distribution through the minimum value, maximum value, median, and lower and upper quartiles. It helps illustrate data concentration, dispersion, and potential outliers. It is suitable for comparing distribution differences among groups and quickly understanding data variation characteristics.
+
+The chart automatically calculates the minimum value, maximum value, median, and quartiles based on the provided data. Users do not need to calculate these statistical indicators in advance.
+
+### Sankey Chart ***new***
+
+A Bubble Chart is used to display data with three or more dimensions. The X-axis and Y-axis represent two numerical variables, while the bubble size represents a third numerical dimension. It is suitable for analyzing relationships among multiple variables, comparing data distributions, and identifying clusters, trends, or outliers.
+
+```json
+{
+  "categories": ["Number of Private Childcare Centers", "Population Aged 0-14", "Number of Obstetrics and Gynecology Clinics"], // Correspond to X, Y, and Z dimensions
+  "data": [
+    {
+      "name": "District Name", // Group represented by each bubble (e.g., district)
+      "data": [
+        {
+          "x": 12, // X-axis value corresponding to the first category
+          "y": 25000, // Y-axis value corresponding to the second category
+          "z": 18 // Bubble size corresponding to the third category
+        }
+      ]
+    }
+  ]
 }
 ```

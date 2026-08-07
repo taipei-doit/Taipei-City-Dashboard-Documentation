@@ -31,11 +31,21 @@ The dashboard view shows components in their basic chart configuration. Here, us
 
 In the dashboard view, a "more information" (組件資訊 **_arrow_circle_right_**) option is also available in the bottom right corner of most components. Clicking on the button will show a dialog that displays a more detailed description of the component, including historical data if available. There will also be the option to report problems (回報問題 **_flag_**) and download the statistical data displayed (下載資料 **_download_**).
 
+AI insight functionality is provided for selected components. Users can click the AI button displayed in the upper-right corner of a component to open a popup window and view the corresponding AI-generated insights. These insights are generated at a specified analysis time point by applying a designated AI model to analyze and process the chart data available at that time. The generated insights serve as a reference for data interpretation and decision support.
+
 ## /mapview
 
 The map view by default lists all components in a collapsed form on the left and displays a larger map to the right. By clicking on the toggle, the component expands and renders geographical data (if available) to the map. To learn more about a data point on the map, simply click and a helpful popup will appear.
 
 ![User Interface Map Page](/images/front-end/user-interface-3.png)
+
+AI insight functionality is provided for selected components. Users can click the AI button displayed in the upper-right corner of a component to open a popup window and view the corresponding AI-generated insights. These insights are generated at a specified analysis time point by applying a designated AI model to analyze the layer data contained within the component at that time. The generated insights serve as a reference for data interpretation and decision support.
+
+![User Interface Map Page - AI Insight Summary](/images/front-end/user-interface-3-1.png)
+
+The upper-right corner of the map area provides a comprehensive set of map interaction tools, including location, zoom controls, compass, administrative boundary toggling, and nearest-point search. It also supports the advanced GIS analysis feature, Isochrone Analysis. Users can configure location, time constraints, and transportation modes to quickly generate isochrone layers, enabling them to identify reachable areas under different scenarios and providing references for site selection and spatial decision-making.
+
+![User Interface Map Page - Isochrone Creation Guide](/images/front-end/user-interface-3-2.png)
 
 ## /component
 

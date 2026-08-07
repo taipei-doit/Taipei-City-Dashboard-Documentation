@@ -29,9 +29,9 @@
     "long_desc": "...", // String; 詳細描述
     "use_case": "...", // String; 使用案例描述
     "links": ["https://…", ...], // Array of Strings || null; 原始資料來源
-    "tags": ["..."], // Array; 組件的標籤
 	"contributors": ["doit", ...], // Array of Strings; 貢獻者 id
     "city": "taipei", // taipei || metrotaipei; 資料來源城市，詳見下方第6個資訊匡
+    "enable_ai_summary": true, // Boolean，是否顯示 AI 摘要
 }]
 ```
 

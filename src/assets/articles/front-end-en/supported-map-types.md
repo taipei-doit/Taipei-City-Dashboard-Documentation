@@ -105,3 +105,9 @@ The isoline map type generates contour lines from points and their respective va
 	// ...other line paint properties
 }
 ```
+
+### Wind-heat
+
+The Wind-Heat map visualizes local wind fields by retrieving meteorological station metadata together with observed wind direction and wind speed. Local wind conditions across the map are estimated using the Inverse Distance Weighting (IDW) interpolation method and displayed through animated wind particles that indicate wind direction and flow.
+
+In addition, a heatmap layer is overlaid on the basemap, where heat continuously accumulates, advects with the wind field, and gradually dissipates over time. This visualization illustrates the spatial distribution of wind trajectories and the relative intensity of their influence.

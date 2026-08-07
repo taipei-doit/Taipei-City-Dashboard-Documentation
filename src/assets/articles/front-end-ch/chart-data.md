@@ -196,3 +196,59 @@
 ```
 
 **支援的圖表類型：** 地圖圖例 (MapLegend)
+
+### 多維度資料 (bubble)
+
+多維度資料是以配置 Object 形式儲存，形式如下。
+
+**格式：**
+
+```json
+{
+  "categories": ["私立托嬰中心數", "0-14歲人口", "婦產科診所數"], // 依序對應 x、y、z 三個維度的欄位名稱
+  "data": [
+    {
+      "name": "行政區名稱", // 每個泡泡代表的分組（如區域）
+      "data": [
+        {
+          "x": 12, // X軸數值，對應第1個 category（私立托嬰中心數）
+          "y": 25000, // Y軸數值，對應第2個 category（0-14歲人口）
+          "z": 18 // 泡泡大小數值，對應第3個 category（婦產科診所數）
+        }
+      ]
+    }
+  ]
+}
+```
+
+**支援的圖表類型：** 泡泡圖 (BubbleChart)
+
+### 階層式流向資料 (layered_flow)
+
+階層式流向資料是以配置 Object 形式儲存，形式如下。
+
+**格式：**
+
+```json
+{
+  "categories": ["Raw Material Supplier", "Catering Provider", "School"], // 可為 null，如圖表為旭日圖時無須填值
+  "data": [
+    {
+      "source": "Raw Material Supplier A", 
+      "source_layer": 0, // 可為 null，如圖表為旭日圖時無須填值
+      "target": "Catering Provider A", 
+      "target_layer": 1, // 可為 null，如圖表為旭日圖時無須填值
+      "value": 100 // Flow value
+    },
+    {
+      "source": "Catering Provider A",
+      "source_layer": 1,
+      "target": "School A", 
+      "target_layer": 2,
+      "value": 100
+    }
+  ]
+}
+```
+
+**支援的圖表類型：** 旭日圖 (SunbrustChart)、桑基圖 (SankeyChart)

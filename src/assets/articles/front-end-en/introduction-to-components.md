@@ -29,9 +29,9 @@ Each component has three identifying attributes: Index, ID, and City. Among thes
     "long_desc": "...", // String; long description
     "use_case": "...", // String; use case description
     "links": ["https://…", ...], // Array of Strings || null; raw data sources
-    "tags": ["..."], // Array; of tags that describe the component
 	"contributors": ["doit", ...], // Array of Strings; contributor id
     "city": "taipei", // taipei || metrotaipei; Source city of the data. See 6th info box below for details
+    "enable_ai_summary": true, // Boolean; Whether to display the AI-generated summary
 }]
 ```
 

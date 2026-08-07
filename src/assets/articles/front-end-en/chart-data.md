@@ -196,3 +196,60 @@ Map Legend Data is stored in configuration objects that are used to render map l
 ```
 
 **Supported Chart Types:** Map Legend
+
+### Multidimensional Data (bubble)
+
+Multidimensional data is stored as a configuration Object in the following format.
+
+**Format:**
+
+```json
+{
+  "categories": ["Number of Private Childcare Centers", "Population Aged 0-14", "Number of Obstetrics and Gynecology Clinics"], // Correspond to the field names of the x, y, and z dimensions respectively
+  "data": [
+    {
+      "name": "District Name", // Group represented by each bubble (e.g., district)
+      "data": [
+        {
+          "x": 12, // X-axis value corresponding to the 1st category (Number of Private Childcare Centers)
+          "y": 25000, // Y-axis value corresponding to the 2nd category (Population Aged 0-14)
+          "z": 18 // Bubble size value corresponding to the 3rd category (Number of Obstetrics and Gynecology Clinics)
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Supported Chart Types:** Bubble Chart (`BubbleChart`)
+
+### Hierarchical Flow Data (layered_flow)
+
+Hierarchical flow data is stored as a configuration Object in the following format.
+
+**Format:**
+
+```json
+{
+  "categories": ["Raw Material Supplier", "Catering Provider", "School"], // Can be null; no value is required for charts such as Sunburst Chart
+  "data": [
+    {
+      "source": "Raw Material Supplier A",
+      "source_layer": 0, // Can be null; no value is required for charts such as Sunburst Chart
+      "target": "Catering Provider A",
+      "target_layer": 1, // Can be null; no value is required for charts such as Sunburst Chart
+      "value": 100 // Flow value
+    },
+    {
+      "source": "Catering Provider A",
+      "source_layer": 1,
+      "target": "School A",
+      "target_layer": 2,
+      "value": 100
+    }
+  ]
+}
+```
+
+**Supported Chart Types:** Sunburst Chart (`SunburstChart`), Sankey Chart (`SankeyChart`)
+
